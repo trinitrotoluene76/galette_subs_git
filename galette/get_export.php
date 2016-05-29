@@ -55,7 +55,10 @@ use Galette\IO\CsvOut;
 
 //Exports main contain user confidential data, they're accessible only for
 //admins or staff members
-if ( $login->isAdmin() || $login->isStaff() ) {
+
+//début evol #52
+if ( $login->isAdmin() || $login->isStaff() ||$login->isGroupManager()) {
+//fin evol #52 || $member->managed_groups
 
     if (file_exists(CsvOut::DEFAULT_DIRECTORY . $filename) ) {
         header('Content-Type: text/csv');

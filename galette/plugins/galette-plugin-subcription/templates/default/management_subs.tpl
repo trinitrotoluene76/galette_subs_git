@@ -207,7 +207,7 @@
 									<option  value="{$galette_base_path}{$subscription_dir}management_subs.php?id_act={$id_act}&nbligne=3{if $order>0}&order={$order}{/if}" {if $select_nbligne==3}selected="selected"{/if}>50</option>
 									<option  value="{$galette_base_path}{$subscription_dir}management_subs.php?id_act={$id_act}&nbligne=4{if $order>0}&order={$order}{/if}" {if $select_nbligne==4}selected="selected"{/if}>{_T string="All"}</option>
 						</select>
-					
+					<a id="btnsave" class="button" target="blanck" href="{$galette_base_path}{$subscription_dir}export_subs.php?id_act={$id_act}">Export</a>
 				</div>
 	{/if}
 {/foreach}	
