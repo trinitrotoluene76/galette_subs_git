@@ -13,7 +13,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../classes/followup.class.php:198
+#: ../templates/default/maintenance/public_page.tpl:35
+msgid ""
+"Please update your browser or use an alternative one, like Mozilla Firefox "
+"(http://mozilla.org)."
+msgstr ""
+"Veuillez mettre à jour votre navigateur, ou utiliser un navigateur "
+"alternatif, comme Mozilla Firefox (http://mozilla.org)."
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:27
+msgid "Informations about groups"
+msgstr "Renseignements sur les groupes"
+
+#: ../classes/followup.class.php:203
 msgid "followup.insert ECHEC"
 msgstr ""
 
@@ -30,8 +42,8 @@ msgstr "Responsable"
 msgid "Add picture on subscriber profile"
 msgstr "Ajouter une photo dans le profil de l'abonné"
 
-#: ../templates/default/send_files_standalone.tpl:111
-#: ../templates/default/send_files_standalone.tpl:167
+#: ../templates/default/send_files_standalone.tpl:112
+#: ../templates/default/send_files_standalone.tpl:168
 msgid "Description"
 msgstr "Description"
 
@@ -47,7 +59,7 @@ msgstr "Uploader votre fichier rempli"
 msgid "Validated"
 msgstr "Validé"
 
-#: ../management_subs2.php:252
+#: ../management_subs2.php:258
 msgid "Management of Subscribers"
 msgstr "Gestion des abonnés"
 
@@ -55,7 +67,7 @@ msgstr "Gestion des abonnés"
 msgid "Amount due"
 msgstr "Montant dû"
 
-#: ../new_subscription.php:96
+#: ../new_subscription.php:102
 msgid "New subsciption"
 msgstr "Nouvel abonnement"
 
@@ -81,19 +93,19 @@ msgstr "Liste des fichiers nécessaires"
 msgid "Hours"
 msgstr "Horaires"
 
-#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:17
 msgid "Management of groups"
 msgstr "Gestion des groupes"
 
-#: ../management_groups.php:166
+#: ../management_groups.php:173
 msgid "Groups Management for staff"
 msgstr "Gestion des groupes par le bureau"
 
-#: ../templates/default/send_files_standalone.tpl:71
+#: ../templates/default/send_files_standalone.tpl:72
 msgid "2. Add a description"
 msgstr "2. Ajoutez une description"
 
-#: ../subs_confirmation.php:265 ../templates/default/subs_confirmation.tpl:2
+#: ../subs_confirmation.php:271 ../templates/default/subs_confirmation.tpl:2
 #: ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
 #: ../templates/default/follow_up_subs.tpl:2
@@ -107,15 +119,15 @@ msgstr "Validation"
 msgid "At least one activity is refused"
 msgstr "Au moins une activité est refusée"
 
-#: ../templates/default/send_files.tpl:141
+#: ../templates/default/send_files.tpl:142
 msgid "Cancel my request"
 msgstr "Annuler ma demande d'abn"
 
-#: ../view_files.php:105
+#: ../view_files.php:112
 msgid "My Files"
 msgstr "Mes fichiers"
 
-#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+#: ../templates/default/menu.tpl:11 ../templates/default/menu.tpl:21
 msgid "Management of subscribers"
 msgstr "Gestion des abonnés"
 
@@ -123,7 +135,7 @@ msgstr "Gestion des abonnés"
 msgid "Subscription message:"
 msgstr "Message lié à l'abonnement:"
 
-#: ../templates/default/send_files_standalone.tpl:82
+#: ../templates/default/send_files_standalone.tpl:83
 #: ../templates/default/management_groups.tpl:114
 #: ../templates/default/management_groups.tpl:131
 msgid "yes"
@@ -141,7 +153,7 @@ msgstr "répertoire"
 msgid "Sub. status"
 msgstr "Statut de l'abonné"
 
-#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+#: ../templates/default/menu.tpl:10 ../templates/default/menu.tpl:32
 msgid "Follow up of requests"
 msgstr "Suivi des demandes"
 
@@ -163,25 +175,21 @@ msgstr "Abonné ajouté au groupe:"
 msgid "All activities are payed"
 msgstr "Toutes les activités sont payées"
 
-#: ../templates/default/send_files.tpl:124
+#: ../templates/default/send_files.tpl:125
 msgid "Add a message for subscription"
 msgstr "Ajouter un message lié à l'abonnement"
+
+#: ../templates/default/send_files.tpl:117
+msgid "You haven't got a picture on your profile. We need one for the licence"
+msgstr ""
+"Vous n'avez pas de photo dans votre profil. Nous en avons besoin pour la "
+"licence"
 
 #: ../templates/default/management_subs2.tpl:32
 msgid "Age"
 msgstr "Age"
 
-#: ../templates/default/send_files_standalone.tpl:56
-#: ../templates/default/send_files.tpl:80
-msgid ""
-"We detect that your web browser doesn&#39;t have flash player. You need "
-"flash 8 minimum or use Chrome in portable version to upload files"
-msgstr ""
-"Nous détectons que votre navigateur web n&#39;a pas flash player. Vous avez "
-"besoin de flash player 8 minimum ou utilisez Chrome en version portable pour "
-"uploader des fichiers"
-
-#: ../view_activity.php:66
+#: ../view_activity.php:73
 msgid "View Activity"
 msgstr "Voir l'Activité"
 
@@ -191,10 +199,10 @@ msgstr "Feedback de l'activité (off)"
 
 #: ../templates/default/view_files.tpl:31
 #: ../templates/default/view_files.tpl:55
-#: ../templates/default/send_files_standalone.tpl:119
-#: ../templates/default/send_files_standalone.tpl:145
-#: ../templates/default/send_files_standalone.tpl:177
-#: ../templates/default/send_files_standalone.tpl:200
+#: ../templates/default/send_files_standalone.tpl:120
+#: ../templates/default/send_files_standalone.tpl:146
+#: ../templates/default/send_files_standalone.tpl:178
+#: ../templates/default/send_files_standalone.tpl:201
 msgid "Delete"
 msgstr "Supprimer"
 
@@ -208,7 +216,7 @@ msgstr "Voir les transactions"
 msgid "Price 3"
 msgstr "Tarif 3"
 
-#: ../templates/default/send_files.tpl:142
+#: ../templates/default/send_files.tpl:143
 msgid "Send my request"
 msgstr "Envoyer ma demande"
 
@@ -226,7 +234,7 @@ msgstr "Formulaire"
 
 #: ../templates/default/subs_confirmation.tpl:15
 #: ../templates/default/view_files.tpl:28
-#: ../templates/default/send_files_standalone.tpl:171
+#: ../templates/default/send_files_standalone.tpl:172
 #: ../templates/default/management_subs.tpl:26
 #: ../templates/default/follow_up_subs.tpl:13
 msgid "Date"
@@ -242,18 +250,18 @@ msgstr "orange"
 msgid "id"
 msgstr "Id"
 
-#: ../templates/default/send_files_standalone.tpl:92
+#: ../templates/default/send_files_standalone.tpl:93
 #: ../templates/default/management_subs2.tpl:165
 msgid "Previous"
 msgstr "Précédent"
 
-#: ../templates/default/send_files_standalone.tpl:81
+#: ../templates/default/send_files_standalone.tpl:82
 #: ../templates/default/management_groups.tpl:113
 #: ../templates/default/management_groups.tpl:130
 msgid "no"
 msgstr "non"
 
-#: ../classes/subscription.class.php:169
+#: ../classes/subscription.class.php:174
 msgid "Subscription.AJOUT update ECHEC"
 msgstr ""
 
@@ -261,7 +269,7 @@ msgstr ""
 msgid "View contributions"
 msgstr "Voir les contributions"
 
-#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+#: ../templates/default/menu.tpl:10 ../templates/default/menu.tpl:32
 msgid "Follow up"
 msgstr "Suivi de mes abonnements"
 
@@ -275,7 +283,7 @@ msgid "You doesn't have any files"
 msgstr "Vous n'avez aucun fichier"
 
 #: ../templates/default/view_activity.tpl:7
-#: ../templates/default/send_files.tpl:118
+#: ../templates/default/send_files.tpl:119
 msgid "Add picture on my profile"
 msgstr "Ajouter une photo à mon profil"
 
@@ -288,6 +296,7 @@ msgid "Payement"
 msgstr "Payement"
 
 #: ../templates/default/new_subscription.tpl:12
+#: ../templates/default/about_group.tpl:8
 msgid "List of activities"
 msgstr "Liste des activités"
 
@@ -300,7 +309,7 @@ msgstr "Fichier supprimé"
 msgid "Add a message for the manager of activity"
 msgstr "Ajouter un message pour le responsable de l'activité"
 
-#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+#: ../templates/default/menu.tpl:11 ../templates/default/menu.tpl:21
 msgid "Management subs"
 msgstr "Gestion des abonnés"
 
@@ -319,6 +328,7 @@ msgid "You've chosen the following activities:"
 msgstr "Vous avez choisi les activités suivantes:"
 
 #: ../templates/default/new_subscription.tpl:16
+#: ../templates/default/about_group.tpl:12
 msgid "Price* (&euro;)"
 msgstr "Tarif* (&euro;)"
 
@@ -330,7 +340,7 @@ msgstr "Mes fichiers"
 msgid "Add/view file"
 msgstr "Ajoutez/voir les fichiers"
 
-#: ../classes/file.class.php:180 ../classes/file.class.php:191
+#: ../classes/file.class.php:185 ../classes/file.class.php:196
 msgid "file.AJOUT ECHEC"
 msgstr ""
 
@@ -338,7 +348,7 @@ msgstr ""
 msgid "Your comment"
 msgstr "Votre commentaire"
 
-#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:17
 msgid "Management grps"
 msgstr "Gestion des groupes"
 
@@ -346,11 +356,11 @@ msgstr "Gestion des groupes"
 msgid "1. Send your file"
 msgstr "1. Envoyez votre fichier"
 
-#: ../management_subs.php:258
+#: ../management_subs.php:264
 msgid "Subscriptions Management for staff"
 msgstr "Gestion des Abonnements par le Bureau"
 
-#: ../classes/subscription.class.php:155
+#: ../classes/subscription.class.php:160
 msgid "Subscription.AJOUT insert ECHEC"
 msgstr ""
 
@@ -367,7 +377,11 @@ msgstr "Votre fichier n'a pas été trouvé"
 msgid "Subscriber status"
 msgstr "Statut de l'abonné"
 
-#: ../classes/followup.class.php:211
+#: ../about_group.php:102
+msgid "About Groups"
+msgstr "A propos des Groupes"
+
+#: ../classes/followup.class.php:216
 msgid "followup.update ECHEC"
 msgstr ""
 
@@ -378,14 +392,23 @@ msgid "Activity"
 msgstr "Activité"
 
 #: ../templates/default/new_subscription.tpl:121
+#: ../templates/default/about_group.tpl:56
 msgid "You are"
 msgstr "Vous avez "
 
-#: ../classes/followup.class.php:168
+#: ../templates/default/follow_up_subs.tpl:62
+msgid "View follow up"
+msgstr "Voir le suivi"
+
+#: ../classes/followup.class.php:173
 msgid "followup.group.AJOUT ECHEC"
 msgstr ""
 
-#: ../follow_up_subs.php:151
+#: ../templates/default/maintenance/public_page.tpl:44
+msgid "Demonstration"
+msgstr ""
+
+#: ../follow_up_subs.php:157
 msgid "Follow up Subscriptions"
 msgstr "Suivi des Abonnements"
 
@@ -398,13 +421,13 @@ msgstr "Suivi des Abonnements"
 msgid "Refused"
 msgstr "Refusé"
 
-#: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:11
-#: ../templates/default/menu.tpl:18
+#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:19
+#: ../templates/default/menu.tpl:29
 #: ../templates/default/subs_confirmation.tpl:12
-#: ../templates/default/send_files_standalone.tpl:174
+#: ../templates/default/send_files_standalone.tpl:175
 #: ../templates/default/management_subs.tpl:23
 #: ../templates/default/follow_up_subs.tpl:10
-#: ../templates/default/send_files.tpl:112
+#: ../templates/default/send_files.tpl:113
 msgid "Subscription"
 msgstr "Abonnement"
 
@@ -414,13 +437,13 @@ msgstr "Abonnement"
 msgid "red"
 msgstr "rouge"
 
-#: ../templates/default/send_files_standalone.tpl:78
+#: ../templates/default/send_files_standalone.tpl:79
 msgid "3. Form to fill up?"
 msgstr "3. Formulaire à remplir?"
 
-#: ../templates/default/send_files_standalone.tpl:102
+#: ../templates/default/send_files_standalone.tpl:103
 msgid "Files of group:"
-msgstr "Fichiers du group:"
+msgstr "Fichiers du groupe:"
 
 #: ../templates/default/confirmation2.tpl:122
 msgid "TOTAL Amount:"
@@ -436,11 +459,12 @@ msgstr "TOTAL estimé"
 msgid "At least one activity is on progress or validated but not payed"
 msgstr "Au moins une activité est en cours ou validé mais pas payé"
 
-#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
 msgid "New resquest of subscription"
 msgstr "Nouvelle demande d'abonnement"
 
 #: ../templates/default/new_subscription.tpl:120
+#: ../templates/default/about_group.tpl:55
 msgid ""
 "*Prices are function of age and status. View details of activities for more "
 "informations"
@@ -448,12 +472,7 @@ msgstr ""
 "*Les tarifs sont fonction de l'age et du statut. Voir les détails des "
 "activités pour plus d'informations"
 
-#: ../templates/default/send_files_standalone.tpl:57
-#: ../templates/default/send_files.tpl:81
-msgid " (Get Flash player) "
-msgstr " (Télécharger Flash Player) "
-
-#: ../templates/default/send_files_standalone.tpl:158
+#: ../templates/default/send_files_standalone.tpl:159
 msgid "Personnal files of group:"
 msgstr "Fichiers personnels du groupe:"
 
@@ -461,11 +480,9 @@ msgstr "Fichiers personnels du groupe:"
 msgid "New Sport Season"
 msgstr "Nouvelle Saison Sportive"
 
-#: ../templates/default/send_files.tpl:116
-msgid "You haven't got a picture on your profile. We need one for the licence"
-msgstr ""
-"Vous n'avez pas de photo dans votre profil. Nous en avons besoin pour la "
-"licence"
+#: ../templates/default/management_subs2.tpl:112
+msgid "Activities linked"
+msgstr "Activités liées"
 
 #: ../templates/default/view_activity.tpl:45
 #: ../templates/default/management_groups.tpl:54
@@ -478,6 +495,7 @@ msgid "Activity subscriber message"
 msgstr "Message de l'abonné pour l'activité"
 
 #: ../templates/default/new_subscription.tpl:96
+#: ../templates/default/about_group.tpl:45
 msgid "view details"
 msgstr "voir les détails"
 
@@ -502,13 +520,14 @@ msgstr "de"
 msgid "File name to fill up"
 msgstr "Nom du fichier à remplir"
 
-#: ../management_subs.php:68
+#: ../management_subs.php:74
 msgid "Subscriptions Management"
 msgstr "Gestion des Abonnements"
 
-#: ../templates/default/management_subs2.tpl:112
-msgid "Activities linked"
-msgstr "Activités liées"
+#: ../templates/default/send_files_standalone.tpl:58
+#: ../templates/default/send_files.tpl:82
+msgid " (Get Google Chrome) "
+msgstr " (télécharger Google Chrome) "
 
 #: ../templates/default/new_subscription.tpl:9
 msgid "tick box"
@@ -518,9 +537,15 @@ msgstr "case à cocher"
 msgid "Add informations about your file"
 msgstr "Ajoutez des informations à votre fichier"
 
-#: ../templates/default/management_groups.tpl:147
-msgid "Add files or forms for the group"
-msgstr "Ajoutez des fichiers ou des formulaires pour le groupe"
+#: ../templates/default/maintenance/public_page.tpl:34
+msgid ""
+"Your browser version is way too old and no longer supported in Galette for a "
+"while."
+msgstr ""
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:27
+msgid "About groups"
+msgstr "A propos des groupes"
 
 #: ../templates/default/management_subs2.tpl:166
 msgid "Add/view files"
@@ -537,15 +562,15 @@ msgstr "Valeur actuelle"
 msgid "Full"
 msgstr "Complet"
 
-#: ../confirmation2.php:130
+#: ../confirmation2.php:136
 msgid "Follow up & Payment"
 msgstr "Suivi et règlement"
 
-#: ../send_files_standalone.php:137
+#: ../send_files_standalone.php:147
 msgid "Add File"
 msgstr "Ajouter un fichier"
 
-#: ../templates/default/send_files_standalone.tpl:93
+#: ../templates/default/send_files_standalone.tpl:94
 #: ../templates/default/management_subs2.tpl:169
 #: ../templates/default/management_groups.tpl:148
 msgid "Save"
@@ -567,7 +592,7 @@ msgstr "enregistré le :"
 msgid "Price category"
 msgstr "Catégorie tarifaire"
 
-#: ../management_groups.php:64
+#: ../management_groups.php:71
 msgid "Groups Management"
 msgstr "Gestion des Groupes"
 
@@ -575,8 +600,8 @@ msgstr "Gestion des Groupes"
 msgid "Add file by fill up this panel for the group:"
 msgstr "Ajoutez un fichier en remplissant cette page pour le groupe:"
 
-#: ../templates/default/send_files_standalone.tpl:64
-#: ../templates/default/send_files.tpl:88
+#: ../templates/default/send_files_standalone.tpl:65
+#: ../templates/default/send_files.tpl:89
 msgid ""
 "We detect that your web browser doesn't accept javascript, please configure "
 "it to accept this. Then, you are permitted to upload files"
@@ -585,7 +610,8 @@ msgstr ""
 "de le configurer pour qu'il les accepte. Vous pourez alors uploader des "
 "fichiers"
 
-#: ../templates/default/view_activity.tpl:69
+#: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:15
+#: ../templates/default/menu.tpl:25 ../templates/default/view_activity.tpl:69
 #: ../templates/default/management_groups.tpl:104
 msgid "Informations"
 msgstr "Renseignements"
@@ -610,12 +636,12 @@ msgstr "vert"
 msgid "Price 1"
 msgstr "Tarif 1"
 
-#: ../classes/activity.class.php:257
+#: ../classes/activity.class.php:261
 msgid "ACTIVITY.AJOUT ECHEC res=2"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:108
-#: ../templates/default/send_files_standalone.tpl:164
+#: ../templates/default/send_files_standalone.tpl:109
+#: ../templates/default/send_files_standalone.tpl:165
 msgid "Link"
 msgstr "Lien"
 
@@ -644,7 +670,7 @@ msgstr "Photo"
 msgid "View subscriber to modify informations & photo"
 msgstr "Voir l'abonné pour modifier ses informations et sa photo"
 
-#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
 msgid "New request"
 msgstr "Nouvelle demande"
 
@@ -657,6 +683,7 @@ msgid "feedback off"
 msgstr "Feedback de l'activité (off)"
 
 #: ../templates/default/new_subscription.tpl:20
+#: ../templates/default/about_group.tpl:16
 #: ../templates/default/management_subs.tpl:40
 #: ../templates/default/follow_up_subs.tpl:24
 msgid "Details"
@@ -680,7 +707,7 @@ msgid "Actual value:"
 msgstr "Valeur actuelle:"
 
 #: ../templates/default/view_activity.tpl:80
-#: ../templates/default/send_files_standalone.tpl:137
+#: ../templates/default/send_files_standalone.tpl:138
 #: ../templates/default/management_subs2.tpl:16
 #: ../templates/default/management_subs.tpl:10
 #: ../templates/default/management_groups.tpl:118
@@ -692,7 +719,13 @@ msgstr "Non"
 msgid ", Number of members"
 msgstr ", Nombre d'inscrits"
 
+#: ../templates/default/maintenance/public_page.tpl:43
+msgid ""
+"This application runs under DEMO mode, all features may not be available."
+msgstr ""
+
 #: ../templates/default/new_subscription.tpl:121
+#: ../templates/default/about_group.tpl:56
 msgid "year old and your status is:"
 msgstr "ans et votre statut est:"
 
@@ -705,9 +738,19 @@ msgstr "Lieu"
 msgid "Follow up the request"
 msgstr "Suivi de la demande"
 
-#: ../templates/default/follow_up_subs.tpl:62
-msgid "View follow up"
-msgstr "Voir le suivi"
+#: ../templates/default/management_groups.tpl:147
+msgid "Add/view files or forms for the group"
+msgstr "Ajouter/voir des fichiers ou des formulaires pour le groupe"
+
+#: ../templates/default/send_files_standalone.tpl:57
+#: ../templates/default/send_files.tpl:81
+msgid ""
+"We detect that your web browser isn&#39;t Chrome. To avoid malfunction with "
+"flash player, Please use Chrome to upload files"
+msgstr ""
+"Nous détectons que votre navigateur web n&#39;est pas Chrome. Pour éviter "
+"des disfonctionnements avec Flash player, utilisez Chrome pour uploader des "
+"fichiers"
 
 #: ../templates/default/management_subs2.tpl:45
 msgid "Subscribtion subscriber message"
@@ -718,15 +761,16 @@ msgid "Number of subscribers:"
 msgstr "Nombre d'abonnés:"
 
 #: ../templates/default/new_subscription.tpl:96
+#: ../templates/default/about_group.tpl:45
 msgid "view details of activity"
 msgstr "voir les détails de l'activité"
 
-#: ../templates/default/send_files_standalone.tpl:115
+#: ../templates/default/send_files_standalone.tpl:116
 msgid "Form to fill up?"
 msgstr "Formulaire à remplir?"
 
 #: ../templates/default/view_activity.tpl:78
-#: ../templates/default/send_files_standalone.tpl:140
+#: ../templates/default/send_files_standalone.tpl:141
 #: ../templates/default/management_subs2.tpl:20
 #: ../templates/default/management_subs.tpl:13
 #: ../templates/default/management_groups.tpl:121
@@ -775,11 +819,11 @@ msgid "Paid"
 msgstr "Payé"
 
 #: ../templates/default/subs_confirmation.tpl:38
-#: ../templates/default/send_files.tpl:130
+#: ../templates/default/send_files.tpl:131
 msgid "Estimated TOTAL:"
 msgstr "TOTAL estimé:"
 
-#: ../send_files.php:120
+#: ../send_files.php:129
 msgid "Send Files"
 msgstr "Envoyer des fichiers"
 
@@ -795,6 +839,9 @@ msgstr "Nom du fichier"
 #: ../templates/default/management_subs.tpl:75
 msgid "View follow up details and modify fields"
 msgstr "Voir le détail du suivi et modifier les champs"
+
+#~ msgid " (Get Flash player) "
+#~ msgstr " (Télécharger Flash Player) "
 
 #~ msgid "Document2"
 #~ msgstr "Document2"

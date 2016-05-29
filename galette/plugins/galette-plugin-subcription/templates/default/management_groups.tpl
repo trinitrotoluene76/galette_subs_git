@@ -144,7 +144,7 @@
 	</div>
 				
 			<div class="button-container">
-				<a id="btnadd" class="button" href="{$galette_base_path}{$subscription_dir}send_files_standalone.php?id_act={$activity->id_group}&vierge=1" target="blank">{_T string="Add files or forms for the group"}</a>
+				<a id="btnadd" class="button" href="{$galette_base_path}{$subscription_dir}send_files_standalone.php?id_act={$activity->id_group}&vierge=1" target="blank">{_T string="Add/view files or forms for the group"}</a>
 				<input type="submit" name="valid" id="btnsave" value="{_T string="Save"}"/>
 				<input type="hidden" name="id_group" value="{$activity->id_group}"/>
 				<input type="hidden" name="id_form" value="{$k}"/>

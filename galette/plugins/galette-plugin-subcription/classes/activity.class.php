@@ -48,10 +48,10 @@ class Activity {
         '_price2' => 'decimal',
         '_price3' => 'decimal',
         '_price4' => 'decimal',
-        '_lieu' => 'varchar(200)',
-        '_jours' => 'varchar(200)',
-        '_horaires' => 'varchar(200)',
-        '_renseignements' => 'varchar(200)',
+        '_lieu' => 'text',
+        '_jours' => 'text',
+        '_horaires' => 'text',
+        '_renseignements' => 'text',
 		'_complet' => 'integer',
 		'_autovalidation' => 'integer'
     );

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Send files for Subscribtion plugin
+ * About_group for Subscribtion plugin
  *
  * PHP version 5
  *
@@ -38,12 +38,7 @@ require_once GALETTE_BASE_PATH . 'includes/galette.inc.php';
 use Galette\Entity\Adherent as Adherent;
 use Galette\Entity\Group as Group;
 use Galette\Repository\Groups as Groups;
-use Galette\Entity\DynamicFields as DynamicFields;
-use Galette\DynamicFieldsTypes\DynamicFieldType as DynamicFieldType;
 
-//-------------------------------------------------------------------------->Détection du navigateur
-require_once GALETTE_BASE_PATH. "plugins/galette-plugin-subcription/includes/navigator_detection.php";
-//--------------------------------------------------------------------------->FIN détection
 
 if (!$login->isLogged()) {
     header('location: ' . GALETTE_BASE_PATH . 'index.php');
@@ -67,83 +62,67 @@ $member = new Adherent();
 $member->load($id_adh);
 //var_dump($member);
 
-//check si l'adhérent a une photo (0/1)
-//var_dump($member->picture->hasPicture());
-$picture=$member->picture->hasPicture();
+require_once 'includes/tarif.php';
 
 //on charge tous les groupes. (j'ai une erreur qui n'empeche pas le fonctionnement mais qui apparait dans le log "Non-static method Activity::getList() should not be called statically"
 	$group=Activity::getList(true);
 	//var_dump ($group);
 	
-	$activities=array();//=$activity0, $activity1, $activity2...
-	$files_vierges=array();//files vierges
+	//recherche des groupes parents
+	$parent_groups=Activity::get_parentgrouplist();
+	//var_dump ($parent_groups[0]->getName());
+	$parent_group_name=$parent_groups[0]->getName();
+	$is_parent_member=$member->isGroupMember($parent_group_name);
+	//var_dump ($is_parent_member);
+	
+	$activities;//=$activity0, $activity1, $activity2...
 	foreach ($group as $key => $value) 
 		{
-			//echo('echo_POST:');
-			if(isset($_POST['total']))
-				{
-				//var_dump($_POST);
-				//parsage de tout ce qui est POSTé
-				foreach ( $_POST as $k_post=>$val_post ) 
-					{
-					//echo('k:');
-					//si case coché=id_group,on créé une nouvelle activity, ou si l'activité est une activité parente
-					if($k_post==$group[$key]->getId() || ($k_post=="id_parent_group_checked" && $val_post==$group[$key]->getId()))
-						{
-						//création de l'objet activité
-						$activity = new Activity();
-						//récupération de l'id_group ainsi que le nom du groupe managé
-						$activity->id_group = $group[$key]->getId();
-						//$activity->group_name = $group[$key]->getName();
-
-						//hydrate l'activité avec les données de la bdd. L'objet passé en paramètre doit être une activité avec un id_group valide
-						$activity->getActivity($activity);
-						//var_dump ($activity);
-						$activities[$key]=$activity;
-						
-						//chaque activité comporte 0 ou plusieurs fichiers vierges
-						$file=new File();
-						$file->id_act=$activity->id_group;
-						//var_dump($file);
-						$files_vierges[$activity->id_group]=$file->getFileListVierge();
-						}
-						
-					}//fin du foreach post
-						
-				$total=$_POST['total'];
-				//var_dump($total);
-				}//fin du isset	
+			$group[$key];
 			
-		}//fin du foreach
-//var_dump($_POST);
-//var_dump ($activities);
-$subscription= new Subscription;
-$subscription->total_estimme=$total;
-$subscription->id_adh=$id_adh;
+			//création de l'objet activité
+			$activity = new Activity();
+			//récupération de l'id_group ainsi que le nom du groupe managé
+			$activity->id_group = $group[$key]->getId();
+			$activity->group_name = $group[$key]->getName();
+			 
+			//recherche les groupes de l'adhérent
+			//var_dump($member->isGroupMember($group[$key]->getName()));
+			$members[$key]=$member->isGroupMember($group[$key]->getName());
+			
+			//recherche si l'activité est au complet
+			//var_dump($activity->is_full($activity));
 
-//2 utilisateurs du formulaire doivent avoir 0.1s minimum de différence 
-//entre le chargement de leur pagepour avoir un nom de fichier différent
-//temps en s*10 (centieme de s)
-$timestamp=intval(microtime(true)*10-13992330840);
-		
-$tpl->assign('page_title', _T("Send Files"));
+			//hydrate l'activité avec les données de la bdd. L'objet passé en paramètre doit être une activité avec un id_group valide
+			$activity->getActivity($activity);
+			//var_dump ($activity);
+			$activities[$key]=$activity;
+		}//fin du foreach
+
+$tpl->assign('page_title', _T("About Groups"));
 
 $tpl->assign('activities',$activities);
 //var_dump ($activities);
 		
-$tpl->assign('picture',$picture);
-$tpl->assign('timestamp',$timestamp);
-$tpl->assign('subscription',$subscription);
-//var_dump ($subscription);
-$tpl->assign('files_vierges',$files_vierges);
-//var_dump ($files_vierges);
+$tpl->assign('members',$members);
+//var_dump ($members);
 
+$tpl->assign('age',$age);
+//var_dump ($age);
+$tpl->assign('statut',$statut);
+//var_dump ($statut);
+$tpl->assign('category',$category);
+//echo ('category: '.$category);
+		
+$tpl->assign('is_parent_member',$is_parent_member);
+//var_dump ($is_parent_member);
+		
 //Set the path to the current plugin's templates,
 //but backup main Galette's template path before
 $orig_template_path = $tpl->template_dir;
 $tpl->template_dir = 'templates/' . $preferences->pref_theme;
 
-$content = $tpl->fetch('send_files.tpl', SUBSCRIPTION_SMARTY_PREFIX);
+$content = $tpl->fetch('about_group.tpl', SUBSCRIPTION_SMARTY_PREFIX);
 $tpl->assign('content', $content);
 //Set path to main Galette's template
 $tpl->template_dir = $orig_template_path;

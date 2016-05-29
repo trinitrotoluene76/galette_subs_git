@@ -37,21 +37,44 @@ We have to use a template file, so Smarty will do its work (like replacing varia
         <![endif]-->
         <header>
             <img src="{$galette_base_path}picture.php?logo=true" width="{$logo->getOptimalWidth()}" height="{$logo->getOptimalHeight()}" alt="[ Galette ]" />
-           
-
+            <ul id="langs">
+{foreach item=langue from=$languages}
+                <li><a href="?pref_lang={$langue->getID()}"><img src="{$langue->getFlag()}" alt="{$langue->getName()}" lang="{$langue->getAbbrev()}" class="flag"/></a></li>
+{/foreach}
+            </ul>
+{if $login->isLogged()}
+            <div id="user">
+                <a id="userlink" title="{_T string="View your member card"}" href="{$galette_base_path}voir_adherent.php">{$login->loggedInAs(true)}</a>
+                <a id="logout" title="{_T string="Log off"}" href="{$galette_base_path}index.php?logout=1">{_T string="Log off"}</a>
+            </div>
+{/if}
 {if $GALETTE_MODE eq 'DEMO'}
         <div id="demo" title="{_T string="This application runs under DEMO mode, all features may not be available."}">
             {_T string="Demonstration"}
         </div>
 {/if}
         </header>
+        <h1 id="titre">{$page_title}</h1>
         <p id="asso_name">{$preferences->pref_nom}{if $preferences->pref_slogan}&nbsp;: {$preferences->pref_slogan}{/if}</p>
-        
+        <nav>
+            <a id="backhome" class="button{if $PAGENAME eq "index.php"} selected{/if}" href="{$galette_base_path}index.php">{_T string="Home"}</a>
+    {if !$login->isLogged()}
+        {if $preferences->pref_bool_selfsubscribe eq true}
+            <a id="subscribe" class="button{if $PAGENAME eq "self_adherent.php"} selected{/if}" href="{$galette_base_path}self_adherent.php">{_T string="Subscribe"}</a>
+        {/if}
+        {if $pref_mail_method neq constant('Galette\Core\GaletteMail::METHOD_DISABLED')}
+            <a id="lostpassword" class="button{if $PAGENAME eq "lostpasswd.php"} selected{/if}" href="{$galette_base_path}lostpasswd.php">{_T string="Lost your password?"}</a>
+        {/if}
+    {/if}
+    {if $preferences->showPublicPages($login) eq true}
+            <a id="memberslist" class="button{if $PAGENAME eq "liste_membres.php"} selected{/if}" href="{$galette_base_path}public/liste_membres.php" title="{_T string="Members list"}">{_T string="Members list"}</a>
+            <a id="trombino" class="button{if $PAGENAME eq "trombinoscope.php"} selected{/if}" href="{$galette_base_path}public/trombinoscope.php" title="{_T string="Trombinoscope"}">{_T string="Trombinoscope"}</a>
+            {* Include plugins menu entries *}
+            {$plugins->getPublicMenus($tpl, $preferences, true)}
+    {/if}
+        </nav>
         {include file="global_messages.tpl"}
         {$content}
-		<div align="center">
-			<img src="{$galette_base_path}{$subscription_dir}templates/default/images/WebMaintenance.jpg" alt="[ Galette ]" width="50%" height="50%"/>
-         </div>  
         {include file="footer.tpl"}
     </body>
 </html>

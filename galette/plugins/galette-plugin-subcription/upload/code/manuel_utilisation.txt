@@ -1,103 +1,103 @@
-Ceci est le manuel d'utilisation et d'installation du formulaire d'upload en flash
-
-
-liste des fichiers:
-AC_RunActiveContent.js    //servant à détecter si le client possède le player flash
-formulaire.swf		  //animation en question
-uploaduniversel.html	  //fichier html modifiable
-table.txt		  //requete sql a importer dans mysql une fois la bdd amauryfroment créée
-
-répertoire php:
-ajoute.php		  //fichier modifiable. Ajoute l'auteur, la description, la date, le nom du fichier,
-			    son nouveau nom (tous les fichiers sont renommé pour ne pas s'écraser) dans la base de donnée.
-			    Auteur et description ont été préalablement convertis par flash avec la fonction escape afin
-			    d'éviter les problèmes d'accents, et autres caractères spéciaux.
-
-repertoire identifiants:
-identifiants.php	  //fichier modifiable. Paramètres de connection à la base de donnée
-upload_proccess.php	  //est une solution alternative au script d'upload "uploadadministrable.pl" mais
-			    il limite l'upload à 2Mo maxi.
-
-
-
-repertoire cgi-bin à placer avant le répertoire www:
-Fileupload.pm		  //fichier perl servant à l'upload du fichier
-uploadadministrable.pl	  //fichier perl qui recueil les données du flash,
-				 modifier la premiere ligne: #!c:/Perl/bin/perl.exe -w
-							par: #!/usr/bin/perl -w 
-				cette derniere ligne représente le chemin où est installé perl,
-				celle-ci peut changer suivant le serveur.
-
-ATTENTION: l'execution du script est limité à 300s par la config du serveur Apache:
-
-	TimeOut Directive
-	Description:	Amount of time the server will wait for certain events before failing a request
-	Syntax:	TimeOut seconds
-	Default:	TimeOut 300
-	Context:	server config, virtual host
-	Status:	Core
-	Module:	core
-
-	The TimeOut directive currently defines the amount of time Apache will wait for three things:
-
-	   1. The total amount of time it takes to receive a GET request.
-	   2. The amount of time between receipt of TCP packets on a POST or PUT request.
-	   3. The amount of time between ACKs on transmissions of TCP packets in responses.
-
-	We plan on making these separately configurable at some point down the road. The timer used to default to 1200 before 1.2, but has been lowered to 300 which is still far more than necessary in most situations. It is not set any lower by default because there may still be odd places in the code where the timer is not reset when a packet is sent.
-
-	---->AJOUT DU TEST DE BANDE PASSANTE:Speedzilla
-		fonctionne sur du javascript
-		debit d'upload remonté avec spdz.js ligne 130 dans consoles speedzilla.php
-	
-		
-
-
-
-le fichier uploaduniversel.html contient l'animation et ses parametres.
-liste des paramètres et explications:
-
--cheminscriptreceveur: est le chemin du script d'upload (upload_process.php)
-		       relatif à l'animation .swf
-		       ../cgi-bin/uploadadministrable.pl
-		       ou upload_process.php
-
-
--chemindossierupload: est le chemin du dossier où les fichiers atterriront.
-		      Ce chemin est relatif au script uploadadministrable.pl,ou uploadprocess.php
-		      ../
-
--cheminpageacharger: est le chemin de la page à charger une fois l'upload réussi.
-		     Ce chemin est relatif à la page contenant l'animation.
-		     index.html ici en mettant la même page, on actualise les informations.
-
--cheminbdd: est le chemin du script "ajoute.php" relatif à la page uploaduniversel.html
-
-
-
-Important: une fois que vous avez modifié ce fichier, effacer vos fichiers temporaires sinon vous ne verrez pas les modifications.
-
-
-	AC_FL_RunContent(
-			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
-			'width', '800',
-			'height', '400',
-			'src', 'formulaire',
-			'quality', 'high',
-			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
-			'align', 'middle',
-			'play', 'true',
-			'loop', 'true',
-			'scale', 'showall',
-			'wmode', 'window',
-			'devicefont', 'false',
-			'id', 'formulaire',
-			'bgcolor', '#000000',
-			'name', 'formulaire',
-			'menu', 'true',
-			'allowScriptAccess','sameDomain',
-			'allowFullScreen','false',
-			'movie', '../../formulaire/formulaire',
-			'salign', '',
-			'flashvars', 'cheminscriptreceveur=upload_process.php&chemindossierupload=../onglet1/ssonglet1/upload&cheminpageacharger=index.php&cheminbdd=ajoute.php?nomonglet=onglet1'
-			); //end AC code
+Ceci est le manuel d'utilisation et d'installation du formulaire d'upload en flash
+
+
+liste des fichiers:
+AC_RunActiveContent.js    //servant à détecter si le client possède le player flash
+formulaire.swf		  //animation en question
+uploaduniversel.html	  //fichier html modifiable
+table.txt		  //requete sql a importer dans mysql une fois la bdd amauryfroment créée
+
+répertoire php:
+ajoute.php		  //fichier modifiable. Ajoute l'auteur, la description, la date, le nom du fichier,
+			    son nouveau nom (tous les fichiers sont renommé pour ne pas s'écraser) dans la base de donnée.
+			    Auteur et description ont été préalablement convertis par flash avec la fonction escape afin
+			    d'éviter les problèmes d'accents, et autres caractères spéciaux.
+
+repertoire identifiants:
+identifiants.php	  //fichier modifiable. Paramètres de connection à la base de donnée
+upload_proccess.php	  //est une solution alternative au script d'upload "uploadadministrable.pl" mais
+			    il limite l'upload à 2Mo maxi.
+
+
+
+repertoire cgi-bin à placer avant le répertoire www:
+Fileupload.pm		  //fichier perl servant à l'upload du fichier
+uploadadministrable.pl	  //fichier perl qui recueil les données du flash,
+				 modifier la premiere ligne: #!c:/Perl/bin/perl.exe -w
+							par: #!/usr/bin/perl -w 
+				cette derniere ligne représente le chemin où est installé perl,
+				celle-ci peut changer suivant le serveur.
+
+ATTENTION: l'execution du script est limité à 300s par la config du serveur Apache:
+
+	TimeOut Directive
+	Description:	Amount of time the server will wait for certain events before failing a request
+	Syntax:	TimeOut seconds
+	Default:	TimeOut 300
+	Context:	server config, virtual host
+	Status:	Core
+	Module:	core
+
+	The TimeOut directive currently defines the amount of time Apache will wait for three things:
+
+	   1. The total amount of time it takes to receive a GET request.
+	   2. The amount of time between receipt of TCP packets on a POST or PUT request.
+	   3. The amount of time between ACKs on transmissions of TCP packets in responses.
+
+	We plan on making these separately configurable at some point down the road. The timer used to default to 1200 before 1.2, but has been lowered to 300 which is still far more than necessary in most situations. It is not set any lower by default because there may still be odd places in the code where the timer is not reset when a packet is sent.
+
+	---->AJOUT DU TEST DE BANDE PASSANTE:Speedzilla
+		fonctionne sur du javascript
+		debit d'upload remonté avec spdz.js ligne 130 dans consoles speedzilla.php
+	
+		
+
+
+
+le fichier uploaduniversel.html contient l'animation et ses parametres.
+liste des paramètres et explications:
+
+-cheminscriptreceveur: est le chemin du script d'upload (upload_process.php)
+		       relatif à l'animation .swf
+		       ../cgi-bin/uploadadministrable.pl
+		       ou upload_process.php
+
+
+-chemindossierupload: est le chemin du dossier où les fichiers atterriront.
+		      Ce chemin est relatif au script uploadadministrable.pl,ou uploadprocess.php
+		      ../
+
+-cheminpageacharger: est le chemin de la page à charger une fois l'upload réussi.
+		     Ce chemin est relatif à la page contenant l'animation.
+		     index.html ici en mettant la même page, on actualise les informations.
+
+-cheminbdd: est le chemin du script "ajoute.php" relatif à la page uploaduniversel.html
+
+
+
+Important: une fois que vous avez modifié ce fichier, effacer vos fichiers temporaires sinon vous ne verrez pas les modifications.
+
+
+	AC_FL_RunContent(
+			'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0',
+			'width', '800',
+			'height', '400',
+			'src', 'formulaire',
+			'quality', 'high',
+			'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+			'align', 'middle',
+			'play', 'true',
+			'loop', 'true',
+			'scale', 'showall',
+			'wmode', 'window',
+			'devicefont', 'false',
+			'id', 'formulaire',
+			'bgcolor', '#000000',
+			'name', 'formulaire',
+			'menu', 'true',
+			'allowScriptAccess','sameDomain',
+			'allowFullScreen','false',
+			'movie', '../../formulaire/formulaire',
+			'salign', '',
+			'flashvars', 'cheminscriptreceveur=upload_process.php&chemindossierupload=../onglet1/ssonglet1/upload&cheminpageacharger=index.php&cheminbdd=ajoute.php?nomonglet=onglet1'
+			); //end AC code

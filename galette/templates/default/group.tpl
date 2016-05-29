@@ -14,10 +14,18 @@
                         <span>{$group->getCreationDate()}</span>
                     </p>
 {/if}
+{if $login->isAdmin() || $login->isStaff()}
                     <p>
                         <label for="group_name" class="bline">{_T string="Name:"}</label>
                         <input type="text" name="group_name" id="group_name" value="{$group->getName()}" maxlength="20" required/>
                     </p>
+{else}
+					<p>
+                        <label for="group_name" class="bline">{_T string="Name:"}</label>
+                        {$group->getName()}
+                    </p>
+{/if}
+
 {if $group->getParentGroup()}
     {assign var='pgroup' value=$group->getParentGroup()}
 {/if}

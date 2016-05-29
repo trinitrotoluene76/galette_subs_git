@@ -81,7 +81,7 @@
         </table>
 	</div>
 	</br>
-	{if $login->isStaff() == 1}
+	{if $login->isAdmin() == 1}
 		<div class="button-container">
 			<a id="histreset" class="button" href="{$galette_base_path}{$subscription_dir}management_subs.php?remove_id_act={$id_act}" title="{_T string="Delete subscriptions for this activity only, files of subscribers for this activity and remove subscribers from the group"}">{_T string="New Sport Season"}</a>
 		</div>

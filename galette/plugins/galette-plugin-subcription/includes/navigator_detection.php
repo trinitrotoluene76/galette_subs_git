@@ -142,5 +142,13 @@ if ( $ua['name']=='Mozilla Firefox' && $ua['version']<15)
 	$error_nav=1;
 	}
 	$tpl->assign('error_nav', $error_nav);
+
+//palliatif au bug #1 avec flash player à 99% au travail ->utiliser chrome
+$error_flash=0;
+if ( $ua['name']=='Google Chrome')
+	{
+	$error_flash=1;
+	}
 	
+	$tpl->assign('error_flash', $error_flash);
 ?>

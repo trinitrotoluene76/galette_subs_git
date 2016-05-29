@@ -48,7 +48,8 @@
 					else 
 						{
 						var hasRightVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
-						if(hasRightVersion) 
+						//Ajout de la détection de Chrome pour corriger le bug #1
+						if(hasRightVersion && {$error_flash}) 
 							{  // si nous avons détecté une version acceptable
 							// intégrer le clip Flash
 							AC_FL_RunContent(
@@ -77,11 +78,11 @@
 							} 
 						else 
 							{  // version Flash trop ancienne ou détection du plug-in impossible
-							var alternateContent = '{_T string="We detect that your web browser doesn&#39;t have flash player. You need flash 8 minimum or use Chrome in portable version to upload files"}'
-									+ '<div><img src="{$galette_base_path}{$subscription_tpl_dir}/images/chrome.png" width=25px height=25px><a target="blank" href="http://www.macromedia.com/go/getflash/" >{_T string=" (Get Flash player) "}<img src="{$galette_base_path}{$subscription_tpl_dir}/images/flash.jpg"  width=25px height=25px></a></div>';
-							document.write(alternateContent);  // Insérer contenu non-Flash
+								var alternateContent = '{_T string="We detect that your web browser isn&#39;t Chrome. To avoid malfunction with flash player, Please use Chrome to upload files"}'
+									+ '<div><img src="{$galette_base_path}{$subscription_tpl_dir}/images/chrome.png" width=25px height=25px><a target="blank" href="http://www.google.com/intl/fr/chrome/browser/?hl=fr" >{_T string=" (Get Google Chrome) "}<img src="{$galette_base_path}{$subscription_tpl_dir}/images/flash.jpg"  width=25px height=25px></a></div>';
+								document.write(alternateContent);  // Insérer contenu non-Flash
 							}
-					}
+						}
 					// -->
 					</script>
 					<noscript>
