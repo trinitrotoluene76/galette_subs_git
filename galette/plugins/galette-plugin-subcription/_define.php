@@ -38,7 +38,7 @@ $this->register(
     'Galette Subscription',         //Name
     'Validation cycle',  //Short description
     'Amaury FROMENT',         //Author
-    '0.4',                      //Version
+    '1.0',                      //Version
     '0.7.8',                    //Galette compatible version
     null                        //Permissions needed - not yet implemented
 );

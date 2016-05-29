@@ -1,12 +1,21 @@
 {if $valid== 1 }
 	<div id="successbox">{_T string="Subscriber added to group:"} {$activities[$followup->id_act]->group_name}</div>
 {/if}
+{if $followups[$activity2->id_group]->statut_act == 0 || $followups[$activity2->id_group]->statut_act == 3}
+{else}
+							
+{/if}
 <form action="management_subs2.php?id_act={$followup->id_act}&id_abn={$followup->id_abn}&id_adh={$followup->id_adh}" method="post" enctype="multipart/form-data" id="form">
 	<div class="bigtable wrmenu">
 		<table class="details">
 			<caption class="ui-state-active ui-corner-top">
 				{$activities[$followup->id_act]->group_name}</br>
-				{_T string="Follow up the request"} N&deg;{$subscription->id_abn} {_T string="of1"} {$subscription->date_demande} {_T string="of2"} <a style="color:blue" class="link" href="{$galette_base_path}/voir_adherent.php?id_adh={$member->id}" target="blank" title="{_T string="View subscriber to modify informations & photo"}">{$member->surname|escape|nl2br} {$member->name|escape|nl2br}</a>
+				{if $followups[$activity2->id_group]->statut_act == 0 || $followups[$activity2->id_group]->statut_act == 3}
+				{_T string="Follow up the request"} N&deg;{$subscription->id_abn} {_T string="of1"} {$subscription->date_demande} {_T string="of2"} <a style="color:blue" class="link" href="{$galette_base_path}/voir_adherent_read_only.php?id_adh={$member->id}" target="blank" title="{_T string="View subscriber to modify informations & photo"}">{$member->surname|escape|nl2br} {$member->name|escape|nl2br}</a>			
+					{else}
+					{_T string="Follow up the request"} N&deg;{$subscription->id_abn} {_T string="of1"} {$subscription->date_demande} {_T string="of2"} <a style="color:blue" class="link" href="{$galette_base_path}/voir_adherent.php?id_adh={$member->id}" target="blank" title="{_T string="View subscriber to modify informations & photo"}">{$member->surname|escape|nl2br} {$member->name|escape|nl2br}</a>			
+				{/if}
+				
 			</caption>
 			
 			<tr>
@@ -14,7 +23,12 @@
 				<td COLSPAN=2>
 					{if $picture == 0}
 						{_T string="No"} ->
-						<a href="{$galette_base_path}voir_adherent.php?id_adh={$member->id}" title="{_T string="Add picture on subscriber profile"}" target="blank">{_T string="Add picture on subscriber profile"}</a>
+						{if $followups[$activity2->id_group]->statut_act == 0 || $followups[$activity2->id_group]->statut_act == 3}
+						<a href="{$galette_base_path}voir_adherent_read_only.php?id_adh={$member->id}" title="{_T string="Add picture on subscriber profile"}" target="blank">{_T string="Add picture on subscriber profile"}</a>	
+							{else}
+							<a href="{$galette_base_path}voir_adherent.php?id_adh={$member->id}" title="{_T string="Add picture on subscriber profile"}" target="blank">{_T string="Add picture on subscriber profile"}</a>							
+							{/if}
+						
 					{/if}
 					{if $picture == 1}
 						{_T string="Yes"}

@@ -24,12 +24,12 @@ msgstr "followup.insert ECHEC"
 msgid "Status"
 msgstr "Status"
 
-#: ../templates/default/view_activity.tpl:10
-#: ../templates/default/management_groups.tpl:18
-msgid "Manager"
-msgstr "Manager"
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
+msgid "New request"
+msgstr "New request"
 
-#: ../templates/default/management_subs2.tpl:18
+#: ../templates/default/management_subs2.tpl:27
+#: ../templates/default/management_subs2.tpl:29
 msgid "Add picture on subscriber profile"
 msgstr "Add picture on subscriber profile"
 
@@ -43,10 +43,10 @@ msgid "Upload your file filled up"
 msgstr "Upload your file filled up"
 
 #: ../templates/default/confirmation2.tpl:47
-#: ../templates/default/management_subs2.tpl:68
-#: ../templates/default/management_subs2.tpl:77
-#: ../templates/default/management_subs2.tpl:122
-#: ../templates/default/management_subs.tpl:105
+#: ../templates/default/management_subs2.tpl:81
+#: ../templates/default/management_subs2.tpl:90
+#: ../templates/default/management_subs2.tpl:135
+#: ../templates/default/management_subs.tpl:115
 msgid "Validated"
 msgstr "Validated"
 
@@ -62,7 +62,7 @@ msgstr "Amount due"
 msgid "New subsciption"
 msgstr "New subsciption"
 
-#: ../templates/default/management_subs.tpl:126
+#: ../templates/default/management_subs.tpl:136
 msgid ""
 "Delete subscriptions for this activity only, files of subscribers for this "
 "activity and remove subscribers from the group"
@@ -105,7 +105,7 @@ msgid "Validation"
 msgstr "Validation"
 
 #: ../templates/default/subs_confirmation.tpl:33
-#: ../templates/default/management_subs2.tpl:155
+#: ../templates/default/management_subs2.tpl:168
 #: ../templates/default/follow_up_subs.tpl:57
 msgid "At least one activity is refused"
 msgstr "At least one activity is refused"
@@ -132,9 +132,9 @@ msgstr "Subscription message:"
 msgid "yes"
 msgstr "yes"
 
-#: ../templates/default/management_subs.tpl:53
-#: ../templates/default/management_subs.tpl:56
-#: ../templates/default/management_subs.tpl:59
+#: ../templates/default/management_subs.tpl:63
+#: ../templates/default/management_subs.tpl:66
+#: ../templates/default/management_subs.tpl:69
 msgid "Name"
 msgstr "Name"
 
@@ -142,7 +142,7 @@ msgstr "Name"
 msgid "folder"
 msgstr "folder"
 
-#: ../templates/default/management_subs.tpl:65
+#: ../templates/default/management_subs.tpl:75
 msgid "Sub. status"
 msgstr "Sub. status"
 
@@ -163,7 +163,7 @@ msgid "Subscriber added to group:"
 msgstr "Subscriber added to group:"
 
 #: ../templates/default/subs_confirmation.tpl:29
-#: ../templates/default/management_subs2.tpl:152
+#: ../templates/default/management_subs2.tpl:165
 #: ../templates/default/follow_up_subs.tpl:53
 msgid "All activities are payed"
 msgstr "All activities are payed"
@@ -176,7 +176,7 @@ msgstr "Add a message for subscription"
 msgid "You haven't got a picture on your profile. We need one for the licence"
 msgstr "You haven't got a picture on your profile. We need one for the licence"
 
-#: ../templates/default/management_subs2.tpl:33
+#: ../templates/default/management_subs2.tpl:46
 msgid "Age"
 msgstr "Age"
 
@@ -184,7 +184,7 @@ msgstr "Age"
 msgid "View Activity"
 msgstr "View Activity"
 
-#: ../templates/default/management_subs2.tpl:58
+#: ../templates/default/management_subs2.tpl:71
 msgid "Activity feedback off"
 msgstr "Activity feedback off"
 
@@ -197,7 +197,7 @@ msgstr "Activity feedback off"
 msgid "Delete"
 msgstr "Delete"
 
-#: ../templates/default/management_subs2.tpl:168
+#: ../templates/default/management_subs2.tpl:181
 msgid "View transactions"
 msgstr "View transactions"
 
@@ -211,7 +211,7 @@ msgstr "Price 3"
 msgid "Send my request"
 msgstr "Send my request"
 
-#: ../templates/default/management_subs2.tpl:107
+#: ../templates/default/management_subs2.tpl:120
 msgid "Estimated Total"
 msgstr "Estimated Total"
 
@@ -226,15 +226,15 @@ msgstr "Form"
 #: ../templates/default/subs_confirmation.tpl:15
 #: ../templates/default/view_files.tpl:28
 #: ../templates/default/send_files_standalone.tpl:172
-#: ../templates/default/management_subs.tpl:41
-#: ../templates/default/management_subs.tpl:44
-#: ../templates/default/management_subs.tpl:47
+#: ../templates/default/management_subs.tpl:51
+#: ../templates/default/management_subs.tpl:54
+#: ../templates/default/management_subs.tpl:57
 #: ../templates/default/follow_up_subs.tpl:13
 msgid "Date"
 msgstr "Date"
 
 #: ../templates/default/subs_confirmation.tpl:24
-#: ../templates/default/management_subs2.tpl:149
+#: ../templates/default/management_subs2.tpl:162
 #: ../templates/default/follow_up_subs.tpl:48
 msgid "orange"
 msgstr "orange"
@@ -244,7 +244,8 @@ msgid "id"
 msgstr "id"
 
 #: ../templates/default/send_files_standalone.tpl:93
-#: ../templates/default/management_subs2.tpl:166
+#: ../templates/default/management_subs2.tpl:179
+#: ../templates/default/confirmation_reset_saison.tpl:3
 msgid "Previous"
 msgstr "Previous"
 
@@ -258,7 +259,7 @@ msgstr "no"
 msgid "Subscription.AJOUT update ECHEC"
 msgstr "Subscription.AJOUT update ECHEC"
 
-#: ../templates/default/management_subs2.tpl:169
+#: ../templates/default/management_subs2.tpl:182
 msgid "View contributions"
 msgstr "View contributions"
 
@@ -305,6 +306,10 @@ msgstr "Add a message for the manager of activity"
 #: ../templates/default/menu.tpl:11 ../templates/default/menu.tpl:21
 msgid "Management subs"
 msgstr "Management subs"
+
+#: ../templates/default/management_subs.tpl:1
+msgid "Activity selected"
+msgstr "Activity selected"
 
 #: ../templates/default/subs_confirmation.tpl:6
 msgid "Subscription sent to staff for validation"
@@ -366,7 +371,7 @@ msgstr "You can pay for this activity"
 msgid "Your file hasn't been found"
 msgstr "Your file hasn't been found"
 
-#: ../templates/default/management_subs2.tpl:27
+#: ../templates/default/management_subs2.tpl:40
 msgid "Subscriber status"
 msgstr "Subscriber status"
 
@@ -380,7 +385,7 @@ msgstr "followup.update ECHEC"
 
 #: ../templates/default/view_files.tpl:21
 #: ../templates/default/confirmation2.tpl:12
-#: ../templates/default/management_subs.tpl:13
+#: ../templates/default/management_subs.tpl:23
 msgid "Activity"
 msgstr "Activity"
 
@@ -403,10 +408,10 @@ msgstr "Follow up Subscriptions"
 
 #: ../templates/default/confirmation2.tpl:53
 #: ../templates/default/confirmation2.tpl:99
-#: ../templates/default/management_subs2.tpl:70
 #: ../templates/default/management_subs2.tpl:83
-#: ../templates/default/management_subs2.tpl:128
-#: ../templates/default/management_subs.tpl:111
+#: ../templates/default/management_subs2.tpl:96
+#: ../templates/default/management_subs2.tpl:141
+#: ../templates/default/management_subs.tpl:121
 msgid "Refused"
 msgstr "Refused"
 
@@ -420,7 +425,7 @@ msgid "Subscription"
 msgstr "Subscription"
 
 #: ../templates/default/subs_confirmation.tpl:32
-#: ../templates/default/management_subs2.tpl:155
+#: ../templates/default/management_subs2.tpl:168
 #: ../templates/default/follow_up_subs.tpl:56
 msgid "red"
 msgstr "red"
@@ -442,7 +447,7 @@ msgid "Estimated TOTAL"
 msgstr "Estimated TOTAL"
 
 #: ../templates/default/subs_confirmation.tpl:25
-#: ../templates/default/management_subs2.tpl:149
+#: ../templates/default/management_subs2.tpl:162
 #: ../templates/default/follow_up_subs.tpl:49
 msgid "At least one activity is on progress or validated but not payed"
 msgstr "At least one activity is on progress or validated but not payed"
@@ -464,11 +469,11 @@ msgstr ""
 msgid "Personnal files of group:"
 msgstr "Personnal files of group:"
 
-#: ../templates/default/management_subs.tpl:126
+#: ../templates/default/management_subs.tpl:136
 msgid "New Sport Season"
 msgstr "New Sport Season"
 
-#: ../templates/default/management_subs2.tpl:113
+#: ../templates/default/management_subs2.tpl:126
 msgid "Activities linked"
 msgstr "Activities linked"
 
@@ -478,7 +483,7 @@ msgstr "Activities linked"
 msgid "Price 4"
 msgstr "Price 4"
 
-#: ../templates/default/management_subs2.tpl:40
+#: ../templates/default/management_subs2.tpl:53
 msgid "Activity subscriber message"
 msgstr "Activity subscriber message"
 
@@ -491,7 +496,7 @@ msgstr "view details"
 msgid "Auto validation"
 msgstr "Auto validation"
 
-#: ../templates/default/management_subs.tpl:3
+#: ../templates/default/management_subs.tpl:13
 msgid "Subscriptions have been deleted"
 msgstr "Subscriptions have been deleted"
 
@@ -500,7 +505,8 @@ msgstr "Subscriptions have been deleted"
 msgid "Day"
 msgstr "Day"
 
-#: ../templates/default/management_subs2.tpl:10
+#: ../templates/default/management_subs2.tpl:14
+#: ../templates/default/management_subs2.tpl:16
 msgid "of2"
 msgstr "of"
 
@@ -529,11 +535,11 @@ msgstr "Add informations about your file"
 msgid "About groups"
 msgstr "About groups"
 
-#: ../templates/default/management_subs2.tpl:167
+#: ../templates/default/management_subs2.tpl:180
 msgid "Add/view files"
 msgstr "Add/view files"
 
-#: ../templates/default/management_subs.tpl:193
+#: ../templates/default/management_subs.tpl:203
 msgid "Number of lignes: "
 msgstr "Number of lignes: "
 
@@ -542,8 +548,12 @@ msgstr "Number of lignes: "
 msgid "Actual value"
 msgstr "Actual value"
 
+#: ../confirmation_reset_saison.php:69
+msgid "Confirmation for a new saison"
+msgstr "Confirmation for a new saison"
+
 #: ../templates/default/view_activity.tpl:75
-#: ../templates/default/management_subs.tpl:14
+#: ../templates/default/management_subs.tpl:24
 #: ../templates/default/management_groups.tpl:110
 msgid "Full"
 msgstr "Full"
@@ -557,7 +567,7 @@ msgid "Add File"
 msgstr "Add File"
 
 #: ../templates/default/send_files_standalone.tpl:94
-#: ../templates/default/management_subs2.tpl:170
+#: ../templates/default/management_subs2.tpl:183
 #: ../templates/default/management_groups.tpl:148
 msgid "Save"
 msgstr "Save"
@@ -566,7 +576,8 @@ msgstr "Save"
 msgid "State"
 msgstr "State"
 
-#: ../templates/default/management_subs2.tpl:10
+#: ../templates/default/management_subs2.tpl:14
+#: ../templates/default/management_subs2.tpl:16
 msgid "of1"
 msgstr "of"
 
@@ -574,7 +585,7 @@ msgstr "of"
 msgid "recorded on :"
 msgstr "recorded on :"
 
-#: ../templates/default/management_subs2.tpl:89
+#: ../templates/default/management_subs2.tpl:102
 msgid "Price category"
 msgstr "Price category"
 
@@ -609,12 +620,13 @@ msgstr "Next"
 msgid "Subs"
 msgstr "Subs"
 
-#: ../templates/default/management_subs.tpl:199
+#: ../templates/default/management_subs.tpl:6
+#: ../templates/default/management_subs.tpl:208
 msgid "All"
 msgstr "All"
 
 #: ../templates/default/subs_confirmation.tpl:28
-#: ../templates/default/management_subs2.tpl:152
+#: ../templates/default/management_subs2.tpl:165
 #: ../templates/default/follow_up_subs.tpl:52
 msgid "green"
 msgstr "green"
@@ -634,16 +646,16 @@ msgstr "ACTIVITY.AJOUT ECHEC res=2"
 msgid "Link"
 msgstr "Link"
 
-#: ../templates/default/management_subs2.tpl:35
+#: ../templates/default/management_subs2.tpl:48
 msgid "ans"
 msgstr "ans"
 
 #: ../templates/default/confirmation2.tpl:44
 #: ../templates/default/confirmation2.tpl:93
-#: ../templates/default/management_subs2.tpl:67
-#: ../templates/default/management_subs2.tpl:74
-#: ../templates/default/management_subs2.tpl:119
-#: ../templates/default/management_subs.tpl:102
+#: ../templates/default/management_subs2.tpl:80
+#: ../templates/default/management_subs2.tpl:87
+#: ../templates/default/management_subs2.tpl:132
+#: ../templates/default/management_subs.tpl:112
 msgid "In progress"
 msgstr "In progress"
 
@@ -651,29 +663,31 @@ msgstr "In progress"
 msgid "Activities"
 msgstr "Activities"
 
-#: ../templates/default/management_subs2.tpl:14
+#: ../templates/default/management_subs2.tpl:22
 msgid "Photo"
 msgstr "Photo"
 
-#: ../templates/default/management_subs2.tpl:10
+#: ../templates/default/management_subs2.tpl:14
+#: ../templates/default/management_subs2.tpl:16
 msgid "View subscriber to modify informations & photo"
 msgstr "View subscriber to modify informations & photo"
 
-#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
-msgid "New request"
-msgstr "New request"
+#: ../templates/default/view_activity.tpl:10
+#: ../templates/default/management_groups.tpl:18
+msgid "Manager"
+msgstr "Manager"
 
 #: ../templates/default/subs_confirmation.tpl:51
 msgid "Manage subcription"
 msgstr "Manage subcription"
 
-#: ../templates/default/management_subs2.tpl:116
+#: ../templates/default/management_subs2.tpl:129
 msgid "feedback off"
 msgstr "feedback off"
 
 #: ../templates/default/new_subscription.tpl:20
 #: ../templates/default/about_group.tpl:16
-#: ../templates/default/management_subs.tpl:80
+#: ../templates/default/management_subs.tpl:90
 #: ../templates/default/follow_up_subs.tpl:24
 msgid "Details"
 msgstr "Details"
@@ -691,14 +705,14 @@ msgstr "Data aren't valid"
 msgid "Follow up of subscription"
 msgstr "Follow up of subscription"
 
-#: ../templates/default/management_subs2.tpl:72
+#: ../templates/default/management_subs2.tpl:85
 msgid "Actual value:"
 msgstr "Actual value:"
 
 #: ../templates/default/view_activity.tpl:80
 #: ../templates/default/send_files_standalone.tpl:138
-#: ../templates/default/management_subs2.tpl:17
-#: ../templates/default/management_subs.tpl:16
+#: ../templates/default/management_subs2.tpl:25
+#: ../templates/default/management_subs.tpl:26
 #: ../templates/default/management_groups.tpl:118
 #: ../templates/default/management_groups.tpl:135
 msgid "No"
@@ -713,12 +727,21 @@ msgstr ", Number of members"
 msgid "year old and your status is:"
 msgstr "year old and your status is:"
 
+#: ../templates/default/confirmation_reset_saison.tpl:1
+msgid ""
+"Do you really want to delete subscriptions for this activity only, files of "
+"subscribers for this activity and remove subscribers from the group?"
+msgstr ""
+"Do you really want to delete subscriptions for this activity only, files of "
+"subscribers for this activity and remove subscribers from the group?"
+
 #: ../templates/default/view_activity.tpl:51
 #: ../templates/default/management_groups.tpl:86
 msgid "Place"
 msgstr "Place"
 
-#: ../templates/default/management_subs2.tpl:10
+#: ../templates/default/management_subs2.tpl:14
+#: ../templates/default/management_subs2.tpl:16
 msgid "Follow up the request"
 msgstr "Follow up the request"
 
@@ -735,11 +758,11 @@ msgstr ""
 "We detect that your web browser isn&#39;t Chrome. To avoid malfunction with "
 "flash player, Please use Chrome to upload files"
 
-#: ../templates/default/management_subs2.tpl:46
+#: ../templates/default/management_subs2.tpl:59
 msgid "Subscribtion subscriber message"
 msgstr "Subscribtion subscriber message"
 
-#: ../templates/default/management_subs.tpl:21
+#: ../templates/default/management_subs.tpl:31
 msgid "Number of subscribers:"
 msgstr "Number of subscribers:"
 
@@ -754,10 +777,11 @@ msgstr "Form to fill up?"
 
 #: ../templates/default/view_activity.tpl:78
 #: ../templates/default/send_files_standalone.tpl:141
-#: ../templates/default/management_subs2.tpl:21
-#: ../templates/default/management_subs.tpl:19
+#: ../templates/default/management_subs2.tpl:34
+#: ../templates/default/management_subs.tpl:29
 #: ../templates/default/management_groups.tpl:121
 #: ../templates/default/management_groups.tpl:138
+#: ../templates/default/confirmation_reset_saison.tpl:4
 msgid "Yes"
 msgstr "Yes"
 
@@ -771,7 +795,7 @@ msgid ""
 msgstr ""
 "-> You haven't got a picture on your profile. We need one for the licence"
 
-#: ../templates/default/management_subs.tpl:115
+#: ../templates/default/management_subs.tpl:125
 msgid "View follow up & modify"
 msgstr "View follow up & modify"
 
@@ -779,11 +803,11 @@ msgstr "View follow up & modify"
 msgid "Estimated total"
 msgstr "Estimated total"
 
-#: ../templates/default/management_subs2.tpl:52
+#: ../templates/default/management_subs2.tpl:65
 msgid "Activity feedback"
 msgstr "Activity feedback"
 
-#: ../templates/default/management_subs2.tpl:116
+#: ../templates/default/management_subs2.tpl:129
 msgid "feedback"
 msgstr "feedback"
 
@@ -793,10 +817,10 @@ msgstr "Group updated"
 
 #: ../templates/default/confirmation2.tpl:50
 #: ../templates/default/confirmation2.tpl:96
-#: ../templates/default/management_subs2.tpl:69
-#: ../templates/default/management_subs2.tpl:80
-#: ../templates/default/management_subs2.tpl:125
-#: ../templates/default/management_subs.tpl:108
+#: ../templates/default/management_subs2.tpl:82
+#: ../templates/default/management_subs2.tpl:93
+#: ../templates/default/management_subs2.tpl:138
+#: ../templates/default/management_subs.tpl:118
 msgid "Paid"
 msgstr "Paid"
 
@@ -809,10 +833,10 @@ msgstr "Estimated TOTAL:"
 msgid "Send Files"
 msgstr "Send Files"
 
-#: ../templates/default/management_subs2.tpl:64
-#: ../templates/default/management_subs.tpl:69
-#: ../templates/default/management_subs.tpl:72
-#: ../templates/default/management_subs.tpl:75
+#: ../templates/default/management_subs2.tpl:77
+#: ../templates/default/management_subs.tpl:79
+#: ../templates/default/management_subs.tpl:82
+#: ../templates/default/management_subs.tpl:85
 msgid "Activity status"
 msgstr "Activity status"
 
@@ -820,7 +844,7 @@ msgstr "Activity status"
 msgid "Doc name"
 msgstr "Doc name"
 
-#: ../templates/default/management_subs.tpl:115
+#: ../templates/default/management_subs.tpl:125
 msgid "View follow up details and modify fields"
 msgstr "View follow up details and modify fields"
 

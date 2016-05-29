@@ -114,6 +114,10 @@ if ( $login->id != $id_adh && !$login->isAdmin() && !$login->isStaff() ) {
             break;
         }
     }
+	//modif bug #34 et #51
+	//$is_managed=true;
+	//fin de la modif
+	
     if ( $is_managed !== true ) {
         //requested member is not part of managed groups, fall back to logged
         //in member

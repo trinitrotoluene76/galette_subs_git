@@ -180,8 +180,8 @@ if($member->managed_groups && !$login->isSuperAdmin() && !$login->isAdmin() && !
 			}
 		else
 			{
-			$select_nbligne=0;
-			$nblignesmax=5;
+			$select_nbligne=1;
+			$nblignesmax=10;
 			}
 		
 		//récupération de la page courrante à afficher
@@ -449,8 +449,8 @@ if($login->isSuperAdmin() || $login->isAdmin() || $login->isStaff())
 			}
 		else
 			{
-			$select_nbligne=0;
-			$nblignesmax=5;
+			$select_nbligne=1;
+			$nblignesmax=10;
 			}
 		
 		//récupération de la page courrante à afficher
@@ -609,7 +609,6 @@ if($login->isSuperAdmin() || $login->isAdmin() || $login->isStaff())
 	
 	}//fin du if staff
 
-
 	
 $tpl->assign('subscriptions',$subscriptions);
 //var_dump ($subscriptions);
@@ -643,6 +642,15 @@ $tpl->assign('select_nbligne',$select_nbligne);
 
 $tpl->assign('valid',$valid);
 //var_dump($valid);
+
+//traitement de la sélection de l'activité, evol#48
+if(isset($_GET["id_act"]))
+	{
+	$id_act_s=$_GET["id_act"];
+	$tpl->assign('id_act_s',$id_act_s);
+	//var_dump($id_act_s); //activté sélectionnée dans la liste déroulante
+	}
+//fin de l'évol + voir assign
 
 
 //Set the path to the current plugin's templates,

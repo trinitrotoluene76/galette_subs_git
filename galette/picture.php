@@ -74,7 +74,11 @@ if (  isset($_GET['logo']) && $_GET['logo'] == 'true' ) {
                 }
             }
         }
-
+		
+//Correction du bug #34 du pluggin subscription
+$is_manager = true;
+//fin de la correction
+                    
         $picture = null;
         if ( $login->isAdmin()
             || $login->isStaff()
