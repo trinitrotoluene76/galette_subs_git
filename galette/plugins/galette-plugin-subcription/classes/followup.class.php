@@ -342,21 +342,96 @@ class Followup {
 	
    /**
 	 *
+     * Exécute une requête SQL pour pour avoir le nb de page et le nombre total d'abonnement par activité
+     * Retourne un tableau contenant: [0]=$nbpage, [1]=$nblignestot.
+     * 
+     * @param followup $object Le suivi contenant l'id_act, et le nombre de résultat max par page.
+     */
+	 static function getFollowupTotSub($object, $resparpage) {
+        global $zdb;
+        $select_nb = new Zend_Db_Select($zdb->db);
+        $select_nb->from(PREFIX_DB . SUBSCRIPTION_PREFIX . self::TABLE)
+				->where('id_act = ?', $object->id_act);
+		
+		$result=array();
+		if ($select_nb->query()->rowCount() > 0) 
+				{
+				$result[1]=$select_nb->query()->rowCount();
+				$nblignestot=$result[1];
+				//arrondi au nombre de page supérieur
+				$result[0]=ceil($nblignestot/$resparpage);
+				}
+		else $result=0;
+		//var_dump($select_nb->query()->rowCount());
+		//var_dump($result);
+		
+		return $result;
+	 }
+	 
+	 /**
+	 *
      * Exécute une requête SQL pour récupérer les abonnements
      * Retourne un tableau d'id_abn.
      * 
-     * @param followup $object Le suivi contenant l'id_act.
+     * @param followup $object Le suivi contenant l'id_act, $order= ordre de tri (optionnel), le n° de page (optionnel) et le nombre de ligne par page maxi(optionnel).
      */
-    static function getFollowupSub($object) {
+	 //evol 42 0: id_abn desc
+	static function getFollowupSub($object,$order0, $numpage0, $nblignes0) {
         global $zdb;
-
-        // Statut
-        $select_id = new Zend_Db_Select($zdb->db);
+		
+		if($numpage0==0 || $numpage0==null || $nblignes0==0 || $nblignes0==null)
+			{
+			$numpage=1;
+			$nblignes=1000;//valeur arbitraire, ces 2 champs étant obligatoires dans limitPage.
+			}
+		else
+		{
+		$numpage=$numpage0;
+		$nblignes=$nblignes0;
+		}
+			
+		//evol 42 1: id_abn desc
+		//		  2: id_abn asc
+		//		  3: Nom desc, id_abn
+		//		  4: Nom asc, id_abn
+		//		  7: Statut_act desc, id_abn
+		//		  8: Statut_act asc, id_abn
+		if($order0==1)
+			{
+			$order=array('id_abn DESC');
+			}
+		if($order0==2)
+			{
+			$order=array('id_abn ASC');
+			}
+		if($order0==3)
+			{
+			$order=array('nom_adh DESC','id_abn');
+			}
+		if($order0==4)
+			{
+			$order=array('nom_adh ASC','id_abn');
+			}
+		if($order0==7 || $order0==null)
+			{
+			$order=array('statut_act DESC','id_abn');
+			}
+		if($order0==8)
+			{
+			$order=array('statut_act ASC','id_abn');
+			}
+		
+        //requete pour avoir les résultats
+		$select_id = new Zend_Db_Select($zdb->db);
         $select_id->from(PREFIX_DB . SUBSCRIPTION_PREFIX . self::TABLE)
+				->join(PREFIX_DB . Galette\Entity\Adherent::TABLE, PREFIX_DB . Galette\Entity\Adherent::TABLE . '.id_adh = ' . PREFIX_DB . SUBSCRIPTION_PREFIX . self::TABLE . '.id_adh')
                 ->where('id_act = ?', $object->id_act)
 				//correction pour evol #37
-				->order(array('statut_act DESC','id_abn'));
+				->order($order)
+				->limitPage($numpage, $nblignes);
 				//fin correction
+				//fin évol 42
+		
         //var_dump($select_id->query()->rowCount());
 			        
         //Analog\Analog::log('test de load followup');

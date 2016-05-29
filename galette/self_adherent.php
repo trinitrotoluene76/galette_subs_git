@@ -82,7 +82,14 @@ $fields = Adherent::getDbFields();
 if ( isset($_POST["nom_adh"]) ) {
     $adherent['dyn'] = $dyn_fields->extractPosted($_POST, $disabled);
     $valid = $member->check($_POST, $required, $disabled);
-    if ( $valid === true ) {
+	
+//--------------------------------------->
+//modification ajouté le 25/09/14 par Amaury Froment pour l'evol #43 interdiction doubons/homonymes
+if($member->is_doublon($_POST['nom_adh'],$_POST['prenom_adh'],$_POST['ddn_adh'])>0)
+	{$valid=false;}
+//-------------------------------->fin de l'ajout d'Amaury
+
+	if ( $valid === true ) {
         //all goes well, we can proceed
         $store = $member->store();
         if ( $store === true ) {

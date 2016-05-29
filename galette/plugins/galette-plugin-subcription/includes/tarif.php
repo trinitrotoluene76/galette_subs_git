@@ -53,9 +53,13 @@ $dynamic_fields = $dyn_fields->prepareForDisplay(
 );
 //var_dump($dynamic_fields[0]['choices']);
 //var_dump($dynamic_fields[0]['field_name']);
+//var_dump($Field_name);
 foreach ( $dynamic_fields as $k => $v ) 
 	{
-	if($dynamic_fields[$k]['field_name'] == $Field_name)
+	//var_dump($dynamic_fields[$k]['field_name']);
+	//modification pour bug #40
+	if($dynamic_fields[$k]['field_name'] == $Field_name || $dynamic_fields[$k]['field_name'] == $Field_name." (not translated)")
+	//fin de la modif
 		{
 		//var_dump($dynamic_fields[$k]['choices']);
 		

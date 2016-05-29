@@ -784,7 +784,38 @@ class Adherent
         }
     }
 
-    /**
+//--------------------------------------->
+//modification ajouté le 25/09/14 par Amaury Froment pour l'evol #43 interdiction doubons/homonymes
+
+
+	/**
+	 * Exécute une requête SQL pour trouver le profil doublon
+	 * Retourne 1 si doublon, 0 sinon
+	 * 
+	 * @param nouvel inscrit avec prenom, nom, date de naissance
+	 */
+	public function is_doublon($nom, $prenom, $ddn) 
+		{
+		global $zdb;
+		$result=0;
+		$ddn2 = \DateTime::createFromFormat('j/m/Y',$ddn);
+		$ddn2 = $ddn2->format('Y-m-d');
+		$select = new \Zend_Db_Select($zdb->db);
+		$select->from(PREFIX_DB . self::TABLE)
+			 ->where('nom_adh = ?', $nom)
+			 ->where('prenom_adh = ?', $prenom)
+			 ->where('ddn_adh = ?', $ddn2);
+		if ($select->query()->rowCount() > 0) 
+			{
+			//echo('res>0');
+			$result=1;
+			}//fin du if
+			
+		return $result;
+		}//fin de la fonction
+//-------------------------------->fin de l'ajout d'Amaury
+					
+   /**
      * Check posted values validity
      *
      * @param array $values   All values to check, basically the $_POST array
@@ -807,7 +838,7 @@ class Adherent
             unset($values['societe_adh']);
         }
 
-        foreach ( $fields as $key ) {
+       foreach ( $fields as $key ) {
             //first of all, let's sanitize values
             $key = strtolower($key);
             $prop = '_' . $this->_fields[$key]['propname'];
@@ -845,6 +876,8 @@ class Adherent
 
                 // now, check validity
                 if ( $value != '' ) {
+					
+					
                     switch ( $key ) {
                     // dates
 					

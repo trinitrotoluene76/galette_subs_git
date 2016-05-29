@@ -150,7 +150,90 @@ if($member->managed_groups && !$login->isSuperAdmin() && !$login->isAdmin() && !
 		//fin de la nouvelle saison		
 		//-------------------------------------------------------------------------------------------------------------->
 		
-		$id_abns=$followup->getFollowupSub($followup);
+		//évol #42 tri et selection du nombre de résultat par page
+		//récupération du nombre de lignes à afficher
+		if(isset($_GET["nbligne"]) && isset($_GET["id_act"]))
+			{
+			switch($_GET["nbligne"])
+				{
+				case "0":
+					$select_nbligne=0;
+					$nblignesmax=5;
+				break;
+				case "1":
+					$select_nbligne=1;
+					$nblignesmax=10;
+				break;
+				case "2":
+					$select_nbligne=2;
+					$nblignesmax=20;
+				break;
+				case "3":
+					$select_nbligne=3;
+					$nblignesmax=50;
+				break;
+				case "4":
+					$select_nbligne=4;
+					$nblignesmax=10000;
+				break;
+				}
+			}
+		else
+			{
+			$select_nbligne=0;
+			$nblignesmax=5;
+			}
+		
+		//récupération de la page courrante à afficher
+		if(isset($_GET["currentpage"]) && isset($_GET["id_act"]))
+			{
+			if($_GET["id_act"]==$followup->id_act)
+				{
+				$numpages=$_GET["currentpage"];
+				}
+			else
+				{
+				$numpages=1;
+				}
+			}
+		else
+			{
+			$numpages=1;
+			}
+			
+		//Calcul du nb de page:
+			$respage=array();
+			//$nblignesmax=1;
+			//$numpages=1;
+			$respage=$followup->getFollowupTotSub($followup, $nblignesmax);
+			$nbpages[$followup->id_act]=$respage[0];
+			//var_dump($respage[1]);
+			//var_dump($nbpages);
+			$currentpages[$followup->id_act]=$numpages;
+			
+		//retourne les abonnements triés correspondant au suivi d'une activité
+		//évol #42
+		//trier par 1: id_abn desc
+		//		  2: id_abn asc
+		//		  3: Nom desc, id_abn
+		//		  4: Nom asc, id_abn
+		//		  7 (0 || null): Statut_act desc, id_abn
+		//		  8: Statut_act asc, id_abn
+		$order=0;	
+		//si on a cliqué sur un tri
+		if(isset($_GET['order']))
+			{
+			//pour afficher la position de la flèche de tri
+			$order=$_GET['order'];
+			
+			//retourne les abonnements correspondant au suivi d'une activité
+			$id_abns=$followup->getFollowupSub($followup, $_GET['order'], $numpages, $nblignesmax);
+			}
+		else
+			{
+			$id_abns=$followup->getFollowupSub($followup, 0, $numpages, $nblignesmax);
+			}
+		//fin évol #42
 		
 		//pour chaque activité activité
 			$activity = new Activity();
@@ -335,10 +418,93 @@ if($login->isSuperAdmin() || $login->isAdmin() || $login->isStaff())
 		//fin de la nouvelle saison		
 		//-------------------------------------------------------------------------------------------------------------->
 		
-		//retourne les abonnements correspondant au suivi d'une activité
-		$id_abns=$followup->getFollowupSub($followup);
 		
-		//pour chaque activité activité
+		//évol #42 tri et selection du nombre de résultat par page
+		//récupération du nombre de lignes à afficher
+		if(isset($_GET["nbligne"]) && isset($_GET["id_act"]))
+			{
+			switch($_GET["nbligne"])
+				{
+				case "0":
+					$select_nbligne=0;
+					$nblignesmax=5;
+				break;
+				case "1":
+					$select_nbligne=1;
+					$nblignesmax=10;
+				break;
+				case "2":
+					$select_nbligne=2;
+					$nblignesmax=20;
+				break;
+				case "3":
+					$select_nbligne=3;
+					$nblignesmax=50;
+				break;
+				case "4":
+					$select_nbligne=4;
+					$nblignesmax=10000;
+				break;
+				}
+			}
+		else
+			{
+			$select_nbligne=0;
+			$nblignesmax=5;
+			}
+		
+		//récupération de la page courrante à afficher
+		if(isset($_GET["currentpage"]) && isset($_GET["id_act"]))
+			{
+			if($_GET["id_act"]==$followup->id_act)
+				{
+				$numpages=$_GET["currentpage"];
+				}
+			else
+				{
+				$numpages=1;
+				}
+			}
+		else
+			{
+			$numpages=1;
+			}
+			
+		//Calcul du nb de page:
+			$respage=array();
+			//$nblignesmax=1;
+			//$numpages=1;
+			$respage=$followup->getFollowupTotSub($followup, $nblignesmax);
+			$nbpages[$followup->id_act]=$respage[0];
+			//var_dump($respage[1]);
+			//var_dump($nbpages);
+			$currentpages[$followup->id_act]=$numpages;
+			
+		//retourne les abonnements triés correspondant au suivi d'une activité
+		//évol #42
+		//trier par 1: id_abn desc
+		//		  2: id_abn asc
+		//		  3: Nom desc, id_abn
+		//		  4: Nom asc, id_abn
+		//		  7 (0 || null): Statut_act desc, id_abn
+		//		  8: Statut_act asc, id_abn
+		$order=0;	
+		//si on a cliqué sur un tri
+		if(isset($_GET['order']))
+			{
+			//pour afficher la position de la flèche de tri
+			$order=$_GET['order'];
+			
+			//retourne les abonnements correspondant au suivi d'une activité
+			$id_abns=$followup->getFollowupSub($followup, $_GET['order'], $numpages, $nblignesmax);
+			}
+		else
+			{
+			$id_abns=$followup->getFollowupSub($followup, 0, $numpages, $nblignesmax);
+			}
+		//fin évol #42
+		
+		//pour chaque activité
 			$activity = new Activity();
 			//récupération de l'id_group ainsi que le nom du groupe managé
 			$activity->id_group = $followup->id_act;
@@ -451,6 +617,9 @@ $tpl->assign('subscriptions',$subscriptions);
 $tpl->assign('members',$members);
 //var_dump ($members);
 
+$tpl->assign('order',$order);
+//var_dump ($order);
+
 $tpl->assign('activities',$activities);
 //var_dump($activities);
 
@@ -462,6 +631,15 @@ $tpl->assign('statuts',$statuts);
 
 $tpl->assign('nbinscr',$nbinscr);
 //var_dump($nbinscr);
+
+$tpl->assign('nbpages',$nbpages);
+//var_dump($nbpages);
+
+$tpl->assign('currentpages',$currentpages);
+//var_dump($currentpages);
+
+$tpl->assign('select_nbligne',$select_nbligne);
+//var_dump($select_nbligne);
 
 $tpl->assign('valid',$valid);
 //var_dump($valid);

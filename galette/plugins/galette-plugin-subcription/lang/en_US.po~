@@ -12,7 +12,18 @@ msgstr ""
 "X-Generator: Poedit 1.6.3\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: ../classes/followup.class.php:198
+#: ../templates/default/maintenance/public_page.tpl:35
+msgid ""
+"Please update your browser or use an alternative one, like Mozilla Firefox "
+"(http://mozilla.org)."
+msgstr ""
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:27
+#, fuzzy
+msgid "Informations about groups"
+msgstr "Informations"
+
+#: ../classes/followup.class.php:203
 #, fuzzy
 msgid "followup.insert ECHEC"
 msgstr "followup.AJOUT ECHEC"
@@ -30,8 +41,8 @@ msgstr "Manager"
 msgid "Add picture on subscriber profile"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:111
-#: ../templates/default/send_files_standalone.tpl:167
+#: ../templates/default/send_files_standalone.tpl:112
+#: ../templates/default/send_files_standalone.tpl:168
 #, fuzzy
 msgid "Description"
 msgstr "Subscription"
@@ -49,7 +60,7 @@ msgstr ""
 msgid "Validated"
 msgstr "Validation"
 
-#: ../management_subs2.php:252
+#: ../management_subs2.php:258
 #, fuzzy
 msgid "Management of Subscribers"
 msgstr "Management of subscribers"
@@ -58,7 +69,7 @@ msgstr "Management of subscribers"
 msgid "Amount due"
 msgstr ""
 
-#: ../new_subscription.php:96
+#: ../new_subscription.php:102
 msgid "New subsciption"
 msgstr "New subsciption"
 
@@ -82,20 +93,20 @@ msgstr ""
 msgid "Hours"
 msgstr "Hours"
 
-#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:17
 msgid "Management of groups"
 msgstr "Management of groups"
 
-#: ../management_groups.php:166
+#: ../management_groups.php:173
 msgid "Groups Management for staff"
 msgstr "Groups Management for staff"
 
-#: ../templates/default/send_files_standalone.tpl:71
+#: ../templates/default/send_files_standalone.tpl:72
 #, fuzzy
 msgid "2. Add a description"
 msgstr "New resquest of subscription"
 
-#: ../subs_confirmation.php:265 ../templates/default/subs_confirmation.tpl:2
+#: ../subs_confirmation.php:271 ../templates/default/subs_confirmation.tpl:2
 #: ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
 #: ../templates/default/follow_up_subs.tpl:2
@@ -110,17 +121,17 @@ msgstr "Validation"
 msgid "At least one activity is refused"
 msgstr "List of activities"
 
-#: ../templates/default/send_files.tpl:141
+#: ../templates/default/send_files.tpl:142
 #, fuzzy
 msgid "Cancel my request"
 msgstr "New request"
 
-#: ../view_files.php:105
+#: ../view_files.php:112
 #, fuzzy
 msgid "My Files"
 msgstr "Send files"
 
-#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+#: ../templates/default/menu.tpl:11 ../templates/default/menu.tpl:21
 msgid "Management of subscribers"
 msgstr "Management of subscribers"
 
@@ -129,7 +140,7 @@ msgstr "Management of subscribers"
 msgid "Subscription message:"
 msgstr "Subscription"
 
-#: ../templates/default/send_files_standalone.tpl:82
+#: ../templates/default/send_files_standalone.tpl:83
 #: ../templates/default/management_groups.tpl:114
 #: ../templates/default/management_groups.tpl:131
 msgid "yes"
@@ -147,7 +158,7 @@ msgstr ""
 msgid "Sub. status"
 msgstr ""
 
-#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+#: ../templates/default/menu.tpl:10 ../templates/default/menu.tpl:32
 msgid "Follow up of requests"
 msgstr "Follow up of requests"
 
@@ -169,23 +180,20 @@ msgstr ""
 msgid "All activities are payed"
 msgstr ""
 
-#: ../templates/default/send_files.tpl:124
+#: ../templates/default/send_files.tpl:125
 #, fuzzy
 msgid "Add a message for subscription"
 msgstr "New resquest of subscription"
+
+#: ../templates/default/send_files.tpl:117
+msgid "You haven't got a picture on your profile. We need one for the licence"
+msgstr ""
 
 #: ../templates/default/management_subs2.tpl:32
 msgid "Age"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:56
-#: ../templates/default/send_files.tpl:80
-msgid ""
-"We detect that your web browser doesn&#39;t have flash player. You need "
-"flash 8 minimum or use Chrome in portable version to upload files"
-msgstr ""
-
-#: ../view_activity.php:66
+#: ../view_activity.php:73
 msgid "View Activity"
 msgstr ""
 
@@ -195,10 +203,10 @@ msgstr ""
 
 #: ../templates/default/view_files.tpl:31
 #: ../templates/default/view_files.tpl:55
-#: ../templates/default/send_files_standalone.tpl:119
-#: ../templates/default/send_files_standalone.tpl:145
-#: ../templates/default/send_files_standalone.tpl:177
-#: ../templates/default/send_files_standalone.tpl:200
+#: ../templates/default/send_files_standalone.tpl:120
+#: ../templates/default/send_files_standalone.tpl:146
+#: ../templates/default/send_files_standalone.tpl:178
+#: ../templates/default/send_files_standalone.tpl:201
 msgid "Delete"
 msgstr ""
 
@@ -213,7 +221,7 @@ msgstr "View details"
 msgid "Price 3"
 msgstr "Price 3"
 
-#: ../templates/default/send_files.tpl:142
+#: ../templates/default/send_files.tpl:143
 #, fuzzy
 msgid "Send my request"
 msgstr "New request"
@@ -233,7 +241,7 @@ msgstr "Form"
 
 #: ../templates/default/subs_confirmation.tpl:15
 #: ../templates/default/view_files.tpl:28
-#: ../templates/default/send_files_standalone.tpl:171
+#: ../templates/default/send_files_standalone.tpl:172
 #: ../templates/default/management_subs.tpl:26
 #: ../templates/default/follow_up_subs.tpl:13
 msgid "Date"
@@ -249,18 +257,18 @@ msgstr ""
 msgid "id"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:92
+#: ../templates/default/send_files_standalone.tpl:93
 #: ../templates/default/management_subs2.tpl:165
 msgid "Previous"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:81
+#: ../templates/default/send_files_standalone.tpl:82
 #: ../templates/default/management_groups.tpl:113
 #: ../templates/default/management_groups.tpl:130
 msgid "no"
 msgstr "no"
 
-#: ../classes/subscription.class.php:169
+#: ../classes/subscription.class.php:174
 #, fuzzy
 msgid "Subscription.AJOUT update ECHEC"
 msgstr "Subscription.AJOUT ECHEC"
@@ -269,7 +277,7 @@ msgstr "Subscription.AJOUT ECHEC"
 msgid "View contributions"
 msgstr ""
 
-#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+#: ../templates/default/menu.tpl:10 ../templates/default/menu.tpl:32
 msgid "Follow up"
 msgstr "Follow up"
 
@@ -283,7 +291,7 @@ msgid "You doesn't have any files"
 msgstr ""
 
 #: ../templates/default/view_activity.tpl:7
-#: ../templates/default/send_files.tpl:118
+#: ../templates/default/send_files.tpl:119
 #, fuzzy
 msgid "Add picture on my profile"
 msgstr "Add empty file"
@@ -297,6 +305,7 @@ msgid "Payement"
 msgstr "Payement"
 
 #: ../templates/default/new_subscription.tpl:12
+#: ../templates/default/about_group.tpl:8
 msgid "List of activities"
 msgstr "List of activities"
 
@@ -309,7 +318,7 @@ msgstr ""
 msgid "Add a message for the manager of activity"
 msgstr ""
 
-#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+#: ../templates/default/menu.tpl:11 ../templates/default/menu.tpl:21
 msgid "Management subs"
 msgstr "Management subs"
 
@@ -328,6 +337,7 @@ msgid "You've chosen the following activities:"
 msgstr ""
 
 #: ../templates/default/new_subscription.tpl:16
+#: ../templates/default/about_group.tpl:12
 #, fuzzy
 msgid "Price* (&euro;)"
 msgstr "Price (&euro;)"
@@ -342,7 +352,7 @@ msgstr "Send files"
 msgid "Add/view file"
 msgstr "view details"
 
-#: ../classes/file.class.php:180 ../classes/file.class.php:191
+#: ../classes/file.class.php:185 ../classes/file.class.php:196
 msgid "file.AJOUT ECHEC"
 msgstr "file.AJOUT ECHEC"
 
@@ -350,7 +360,7 @@ msgstr "file.AJOUT ECHEC"
 msgid "Your comment"
 msgstr ""
 
-#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:17
 msgid "Management grps"
 msgstr "Management grps"
 
@@ -359,12 +369,12 @@ msgstr "Management grps"
 msgid "1. Send your file"
 msgstr "Send files"
 
-#: ../management_subs.php:258
+#: ../management_subs.php:264
 #, fuzzy
 msgid "Subscriptions Management for staff"
 msgstr "Groups Management for staff"
 
-#: ../classes/subscription.class.php:155
+#: ../classes/subscription.class.php:160
 #, fuzzy
 msgid "Subscription.AJOUT insert ECHEC"
 msgstr "Subscription.AJOUT ECHEC"
@@ -382,7 +392,11 @@ msgstr ""
 msgid "Subscriber status"
 msgstr ""
 
-#: ../classes/followup.class.php:211
+#: ../about_group.php:102
+msgid "About Groups"
+msgstr ""
+
+#: ../classes/followup.class.php:216
 #, fuzzy
 msgid "followup.update ECHEC"
 msgstr "followup.AJOUT ECHEC"
@@ -394,14 +408,25 @@ msgid "Activity"
 msgstr ""
 
 #: ../templates/default/new_subscription.tpl:121
+#: ../templates/default/about_group.tpl:56
 msgid "You are"
 msgstr ""
 
-#: ../classes/followup.class.php:168
+#: ../templates/default/follow_up_subs.tpl:62
+#, fuzzy
+msgid "View follow up"
+msgstr "Follow up"
+
+#: ../classes/followup.class.php:173
 msgid "followup.group.AJOUT ECHEC"
 msgstr "followup.group.AJOUT ECHEC"
 
-#: ../follow_up_subs.php:151
+#: ../templates/default/maintenance/public_page.tpl:44
+#, fuzzy
+msgid "Demonstration"
+msgstr "Subscription"
+
+#: ../follow_up_subs.php:157
 #, fuzzy
 msgid "Follow up Subscriptions"
 msgstr "Subscription"
@@ -415,13 +440,13 @@ msgstr "Subscription"
 msgid "Refused"
 msgstr ""
 
-#: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:11
-#: ../templates/default/menu.tpl:18
+#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:19
+#: ../templates/default/menu.tpl:29
 #: ../templates/default/subs_confirmation.tpl:12
-#: ../templates/default/send_files_standalone.tpl:174
+#: ../templates/default/send_files_standalone.tpl:175
 #: ../templates/default/management_subs.tpl:23
 #: ../templates/default/follow_up_subs.tpl:10
-#: ../templates/default/send_files.tpl:112
+#: ../templates/default/send_files.tpl:113
 msgid "Subscription"
 msgstr "Subscription"
 
@@ -431,11 +456,11 @@ msgstr "Subscription"
 msgid "red"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:78
+#: ../templates/default/send_files_standalone.tpl:79
 msgid "3. Form to fill up?"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:102
+#: ../templates/default/send_files_standalone.tpl:103
 msgid "Files of group:"
 msgstr ""
 
@@ -453,22 +478,18 @@ msgstr "Estimated TOTAL"
 msgid "At least one activity is on progress or validated but not payed"
 msgstr ""
 
-#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
 msgid "New resquest of subscription"
 msgstr "New resquest of subscription"
 
 #: ../templates/default/new_subscription.tpl:120
+#: ../templates/default/about_group.tpl:55
 msgid ""
 "*Prices are function of age and status. View details of activities for more "
 "informations"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:57
-#: ../templates/default/send_files.tpl:81
-msgid " (Get Flash player) "
-msgstr ""
-
-#: ../templates/default/send_files_standalone.tpl:158
+#: ../templates/default/send_files_standalone.tpl:159
 msgid "Personnal files of group:"
 msgstr ""
 
@@ -476,8 +497,8 @@ msgstr ""
 msgid "New Sport Season"
 msgstr "New Sport Season"
 
-#: ../templates/default/send_files.tpl:116
-msgid "You haven't got a picture on your profile. We need one for the licence"
+#: ../templates/default/management_subs2.tpl:112
+msgid "Activities linked"
 msgstr ""
 
 #: ../templates/default/view_activity.tpl:45
@@ -491,6 +512,7 @@ msgid "Activity subscriber message"
 msgstr ""
 
 #: ../templates/default/new_subscription.tpl:96
+#: ../templates/default/about_group.tpl:45
 msgid "view details"
 msgstr "view details"
 
@@ -516,13 +538,14 @@ msgstr ""
 msgid "File name to fill up"
 msgstr ""
 
-#: ../management_subs.php:68
+#: ../management_subs.php:74
 #, fuzzy
 msgid "Subscriptions Management"
 msgstr "Groups Management"
 
-#: ../templates/default/management_subs2.tpl:112
-msgid "Activities linked"
+#: ../templates/default/send_files_standalone.tpl:58
+#: ../templates/default/send_files.tpl:82
+msgid " (Get Google Chrome) "
 msgstr ""
 
 #: ../templates/default/new_subscription.tpl:9
@@ -533,8 +556,14 @@ msgstr "tick box"
 msgid "Add informations about your file"
 msgstr ""
 
-#: ../templates/default/management_groups.tpl:147
-msgid "Add files or forms for the group"
+#: ../templates/default/maintenance/public_page.tpl:34
+msgid ""
+"Your browser version is way too old and no longer supported in Galette for a "
+"while."
+msgstr ""
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:27
+msgid "About groups"
 msgstr ""
 
 #: ../templates/default/management_subs2.tpl:166
@@ -553,17 +582,17 @@ msgstr ""
 msgid "Full"
 msgstr "Full"
 
-#: ../confirmation2.php:130
+#: ../confirmation2.php:136
 #, fuzzy
 msgid "Follow up & Payment"
 msgstr "Follow up of requests"
 
-#: ../send_files_standalone.php:137
+#: ../send_files_standalone.php:147
 #, fuzzy
 msgid "Add File"
 msgstr "Add empty file"
 
-#: ../templates/default/send_files_standalone.tpl:93
+#: ../templates/default/send_files_standalone.tpl:94
 #: ../templates/default/management_subs2.tpl:169
 #: ../templates/default/management_groups.tpl:148
 msgid "Save"
@@ -585,7 +614,7 @@ msgstr ""
 msgid "Price category"
 msgstr ""
 
-#: ../management_groups.php:64
+#: ../management_groups.php:71
 msgid "Groups Management"
 msgstr "Groups Management"
 
@@ -593,14 +622,15 @@ msgstr "Groups Management"
 msgid "Add file by fill up this panel for the group:"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:64
-#: ../templates/default/send_files.tpl:88
+#: ../templates/default/send_files_standalone.tpl:65
+#: ../templates/default/send_files.tpl:89
 msgid ""
 "We detect that your web browser doesn't accept javascript, please configure "
 "it to accept this. Then, you are permitted to upload files"
 msgstr ""
 
-#: ../templates/default/view_activity.tpl:69
+#: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:15
+#: ../templates/default/menu.tpl:25 ../templates/default/view_activity.tpl:69
 #: ../templates/default/management_groups.tpl:104
 msgid "Informations"
 msgstr "Informations"
@@ -625,13 +655,13 @@ msgstr ""
 msgid "Price 1"
 msgstr "Price 1"
 
-#: ../classes/activity.class.php:257
+#: ../classes/activity.class.php:261
 #, fuzzy
 msgid "ACTIVITY.AJOUT ECHEC res=2"
 msgstr "ACTIVITY.AJOUT ECHEC"
 
-#: ../templates/default/send_files_standalone.tpl:108
-#: ../templates/default/send_files_standalone.tpl:164
+#: ../templates/default/send_files_standalone.tpl:109
+#: ../templates/default/send_files_standalone.tpl:165
 msgid "Link"
 msgstr ""
 
@@ -661,7 +691,7 @@ msgstr ""
 msgid "View subscriber to modify informations & photo"
 msgstr ""
 
-#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
 msgid "New request"
 msgstr "New request"
 
@@ -675,6 +705,7 @@ msgid "feedback off"
 msgstr ""
 
 #: ../templates/default/new_subscription.tpl:20
+#: ../templates/default/about_group.tpl:16
 #: ../templates/default/management_subs.tpl:40
 #: ../templates/default/follow_up_subs.tpl:24
 msgid "Details"
@@ -699,7 +730,7 @@ msgid "Actual value:"
 msgstr ""
 
 #: ../templates/default/view_activity.tpl:80
-#: ../templates/default/send_files_standalone.tpl:137
+#: ../templates/default/send_files_standalone.tpl:138
 #: ../templates/default/management_subs2.tpl:16
 #: ../templates/default/management_subs.tpl:10
 #: ../templates/default/management_groups.tpl:118
@@ -712,7 +743,13 @@ msgstr ""
 msgid ", Number of members"
 msgstr ", Number of members:"
 
+#: ../templates/default/maintenance/public_page.tpl:43
+msgid ""
+"This application runs under DEMO mode, all features may not be available."
+msgstr ""
+
 #: ../templates/default/new_subscription.tpl:121
+#: ../templates/default/about_group.tpl:56
 msgid "year old and your status is:"
 msgstr ""
 
@@ -726,10 +763,16 @@ msgstr "Place"
 msgid "Follow up the request"
 msgstr "Follow up of requests"
 
-#: ../templates/default/follow_up_subs.tpl:62
-#, fuzzy
-msgid "View follow up"
-msgstr "Follow up"
+#: ../templates/default/management_groups.tpl:147
+msgid "Add/view files or forms for the group"
+msgstr ""
+
+#: ../templates/default/send_files_standalone.tpl:57
+#: ../templates/default/send_files.tpl:81
+msgid ""
+"We detect that your web browser isn&#39;t Chrome. To avoid malfunction with "
+"flash player, Please use Chrome to upload files"
+msgstr ""
 
 #: ../templates/default/management_subs2.tpl:45
 #, fuzzy
@@ -742,16 +785,17 @@ msgid "Number of subscribers:"
 msgstr "Management of subscribers"
 
 #: ../templates/default/new_subscription.tpl:96
+#: ../templates/default/about_group.tpl:45
 #, fuzzy
 msgid "view details of activity"
 msgstr "view details"
 
-#: ../templates/default/send_files_standalone.tpl:115
+#: ../templates/default/send_files_standalone.tpl:116
 msgid "Form to fill up?"
 msgstr ""
 
 #: ../templates/default/view_activity.tpl:78
-#: ../templates/default/send_files_standalone.tpl:140
+#: ../templates/default/send_files_standalone.tpl:141
 #: ../templates/default/management_subs2.tpl:20
 #: ../templates/default/management_subs.tpl:13
 #: ../templates/default/management_groups.tpl:121
@@ -801,12 +845,12 @@ msgid "Paid"
 msgstr ""
 
 #: ../templates/default/subs_confirmation.tpl:38
-#: ../templates/default/send_files.tpl:130
+#: ../templates/default/send_files.tpl:131
 #, fuzzy
 msgid "Estimated TOTAL:"
 msgstr "Estimated TOTAL"
 
-#: ../send_files.php:120
+#: ../send_files.php:129
 #, fuzzy
 msgid "Send Files"
 msgstr "Send files"
