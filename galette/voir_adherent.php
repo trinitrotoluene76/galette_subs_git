@@ -58,14 +58,17 @@ if ( !$login->isLogged() ) {
 $id_adh = get_numeric_form_value('id_adh', '');
 
 if ( !$login->isSuperAdmin() ) {
+
     if ( !$login->isAdmin() && !$login->isStaff() && !$login->isGroupManager()
         || $login->isAdmin() && $id_adh == ''
         || $login->isStaff() && $id_adh == ''
         || $login->isGroupManager() && $id_adh == ''
     ) {
         $id_adh = $login->id;
+		
     }
 }
+
 if ( $id_adh == '' ) {
     header('location: index.php');
     die();

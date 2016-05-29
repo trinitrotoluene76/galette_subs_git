@@ -851,7 +851,27 @@ class Adherent
                     case 'ddn_adh':
                         try {
                             $d = \DateTime::createFromFormat(_T("Y-m-d"), $value);
-                            if ( $d === false ) {
+							//--------------------------------------->
+							//modification ajouté le 12/07/14 par Amaury Froment pour corriger le bug sur les dates du type: 14/07/0014
+							$birthdate= \DateTime::createFromFormat('j/m/Y',$value);
+							$today= new \DateTime("now");
+							//echo('today:');
+							//var_dump($today);
+							//echo('birthdate:');
+							//var_dump($birthdate);
+							//echo('diff:');
+							$age=$birthdate->diff($today);
+							//var_dump($age->format('%R%Y'));
+
+							$age=$age->format('%Y');
+							if($age>200)
+								{
+								$d=false;
+								}
+							//-------------------------------->fin de l'ajout d'Amaury
+							
+							
+							if ( $d === false ) {
                                 //try with non localized date
                                 $d = \DateTime::createFromFormat("Y-m-d", $value);
                                 if ( $d === false ) {

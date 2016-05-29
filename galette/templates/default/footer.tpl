@@ -1,4 +1,5 @@
         <footer>
+		{_T string="CNIL"}</br>
             <a id="copyright" href="http://galette.eu/">Galette {$GALETTE_VERSION}</a>
 {if $login->isLogged() &&  ($login->isAdmin() or $login->isStaff())}
             <br/><a id="sysinfos" href="{$galette_base_path}sysinfos.php">{_T string="System informations"}</a>

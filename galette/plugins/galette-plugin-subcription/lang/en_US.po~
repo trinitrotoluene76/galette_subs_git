@@ -1,0 +1,726 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plugin Subscription\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Amaury FROMENT <amaury.froment@gmail.com>\n"
+"Language-Team: Amaury FROMENT <amaury.froment@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: ../templates/default/management_subs2.tpl:44
+msgid "Document2"
+msgstr ""
+
+#: ../classes/followup.class.php:198
+#, fuzzy
+msgid "followup.insert ECHEC"
+msgstr "followup.AJOUT ECHEC"
+
+#: ../templates/default/confirmation2.tpl:15
+msgid "Status"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:10
+#: ../templates/default/management_groups.tpl:18
+msgid "Manager"
+msgstr "Manager"
+
+#: ../templates/default/management_subs2.tpl:17
+msgid "Add picture on subscriber profile"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:111
+msgid "3-Exterieurs et Enfants du Personnel Nexter >25 ans"
+msgstr ""
+
+#: ../templates/default/confirmation2.tpl:45
+#: ../templates/default/management_subs2.tpl:78
+#: ../templates/default/management_subs2.tpl:87
+#: ../templates/default/management_subs2.tpl:132
+#: ../templates/default/management_subs.tpl:65
+#, fuzzy
+msgid "Validated"
+msgstr "Validation"
+
+#: ../management_subs2.php:329
+#, fuzzy
+msgid "Management of Subscribers"
+msgstr "Management of subscribers"
+
+#: ../templates/default/confirmation2.tpl:23
+msgid "Amount due"
+msgstr ""
+
+#: ../new_subscription.php:253
+msgid "New subsciption"
+msgstr "New subsciption"
+
+#: ../templates/default/confirmation2.tpl:19
+msgid "Answer of staff"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:90
+msgid "List of needed files"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:63
+#: ../templates/default/management_groups.tpl:71
+msgid "Hours"
+msgstr "Hours"
+
+#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+msgid "Management of groups"
+msgstr "Management of groups"
+
+#: ../management_groups.php:166
+msgid "Groups Management for staff"
+msgstr "Groups Management for staff"
+
+#: ../subs_confirmation.php:111 ../templates/default/subs_confirmation.tpl:2
+#: ../templates/default/new_subscription.tpl:2
+#: ../templates/default/confirmation2.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/send_files.tpl:2
+msgid "Validation"
+msgstr "Validation"
+
+#: ../templates/default/management_subs2.tpl:178
+#, fuzzy
+msgid "View transactions"
+msgstr "View details"
+
+#: ../templates/default/management_subs2.tpl:99
+msgid "Price category"
+msgstr ""
+
+#: ../templates/default/send_files.tpl:70
+#, fuzzy
+msgid "Cancel my request"
+msgstr "New request"
+
+#: ../templates/default/new_subscription.tpl:121
+msgid " year old and your status is:"
+msgstr ""
+
+#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+msgid "Management of subscribers"
+msgstr "Management of subscribers"
+
+#: ../templates/default/confirmation2.tpl:102
+#, fuzzy
+msgid "Subscription message:"
+msgstr "Subscription"
+
+#: ../templates/default/management_subs2.tpl:38
+msgid "Document1"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:177
+#, fuzzy
+msgid "Add file"
+msgstr "Add empty file"
+
+#: ../templates/default/management_subs.tpl:34
+msgid "Sub. status"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:51
+#: ../templates/default/management_groups.tpl:59
+msgid "Place"
+msgstr "Place"
+
+#: ../templates/default/subs_confirmation.tpl:2
+#: ../templates/default/new_subscription.tpl:2
+#: ../templates/default/confirmation2.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/send_files.tpl:2
+msgid "Send files"
+msgstr "Send files"
+
+#: ../templates/default/management_subs2.tpl:2
+msgid "Subscriber added to group:"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:176
+msgid "Previous"
+msgstr ""
+
+#: ../templates/default/send_files.tpl:53
+#, fuzzy
+msgid "Add a message for subscription"
+msgstr "New resquest of subscription"
+
+#: ../templates/default/management_subs2.tpl:32
+msgid "Age"
+msgstr ""
+
+#: ../templates/default/management_subs.tpl:30
+msgid "Name"
+msgstr ""
+
+#: ../view_activity.php:65
+msgid "View Activity"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:68
+msgid "Activity feedback off"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:108
+msgid "2-Enfant du Personnel Nexter et assimiles <=25 ans"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:39
+#: ../templates/default/management_groups.tpl:47
+msgid "Price 3"
+msgstr "Price 3"
+
+#: ../templates/default/send_files.tpl:71
+#, fuzzy
+msgid "Send my request"
+msgstr "New request"
+
+#: ../templates/default/subs_confirmation.tpl:2
+#: ../templates/default/new_subscription.tpl:2
+#: ../templates/default/confirmation2.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/send_files.tpl:2
+msgid "Form"
+msgstr "Form"
+
+#: ../templates/default/subs_confirmation.tpl:15
+#: ../templates/default/management_subs.tpl:26
+#: ../templates/default/follow_up_subs.tpl:13
+msgid "Date"
+msgstr ""
+
+#: ../classes/followup.class.php:168
+msgid "followup.group.AJOUT ECHEC"
+msgstr "followup.group.AJOUT ECHEC"
+
+#: ../templates/default/management_groups.tpl:86
+msgid "no"
+msgstr "no"
+
+#: ../templates/default/confirmation2.tpl:65
+msgid "Staff message:"
+msgstr ""
+
+#: ../classes/subscription.class.php:169
+#, fuzzy
+msgid "Subscription.AJOUT update ECHEC"
+msgstr "Subscription.AJOUT ECHEC"
+
+#: ../templates/default/management_subs2.tpl:179
+msgid "View contributions"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:94
+#: ../templates/default/send_files.tpl:16
+msgid "Certif medical"
+msgstr ""
+
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+msgid "Follow up"
+msgstr "Follow up"
+
+#: ../templates/default/view_activity.tpl:111
+msgid "Close"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:7
+#: ../templates/default/send_files.tpl:47
+#, fuzzy
+msgid "Add picture on my profile"
+msgstr "Add empty file"
+
+#: ../templates/default/subs_confirmation.tpl:2
+#: ../templates/default/new_subscription.tpl:2
+#: ../templates/default/confirmation2.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/send_files.tpl:2
+msgid "Payement"
+msgstr "Payement"
+
+#: ../templates/default/new_subscription.tpl:12
+msgid "List of activities"
+msgstr "List of activities"
+
+#: ../templates/default/confirmation2.tpl:35
+#, fuzzy
+msgid "add file"
+msgstr "Send files"
+
+#: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:14
+msgid "Management subs"
+msgstr "Management subs"
+
+#: ../templates/default/subs_confirmation.tpl:6
+msgid "Subscription sent to staff for validation"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:33
+#: ../templates/default/management_groups.tpl:41
+msgid "Price 2"
+msgstr "Price 2"
+
+#: ../templates/default/new_subscription.tpl:16
+#, fuzzy
+msgid "Price* (&euro;)"
+msgstr "Price (&euro;)"
+
+#: ../templates/default/management_groups.tpl:87
+msgid "yes"
+msgstr "yes"
+
+#: ../classes/file.class.php:155 ../classes/file.class.php:165
+msgid "file.AJOUT ECHEC"
+msgstr "file.AJOUT ECHEC"
+
+#: ../templates/default/management_subs2.tpl:102
+msgid "0-Personnel Nexter et assimiles"
+msgstr ""
+
+#: ../templates/default/menu.tpl:6 ../templates/default/menu.tpl:13
+msgid "Management grps"
+msgstr "Management grps"
+
+#: ../templates/default/management_subs.tpl:85
+msgid "New Sport Season"
+msgstr "New Sport Season"
+
+#: ../management_subs.php:250
+#, fuzzy
+msgid "Subscriptions Management for staff"
+msgstr "Groups Management for staff"
+
+#: ../classes/subscription.class.php:155
+#, fuzzy
+msgid "Subscription.AJOUT insert ECHEC"
+msgstr "Subscription.AJOUT ECHEC"
+
+#: ../templates/default/confirmation2.tpl:57
+msgid "You can pay for this activity"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:26
+msgid "Subscriber status"
+msgstr ""
+
+#: ../classes/followup.class.php:211
+#, fuzzy
+msgid "followup.update ECHEC"
+msgstr "followup.AJOUT ECHEC"
+
+#: ../templates/default/confirmation2.tpl:12
+#: ../templates/default/management_subs.tpl:7
+msgid "Activity"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:45
+#: ../templates/default/management_groups.tpl:53
+msgid "Price 4"
+msgstr "Price 4"
+
+#: ../templates/default/management_subs2.tpl:159
+#: ../templates/default/follow_up_subs.tpl:48
+msgid "orange"
+msgstr ""
+
+#: ../templates/default/confirmation2.tpl:37
+#, fuzzy
+msgid "view files"
+msgstr "view details"
+
+#: ../follow_up_subs.php:149
+#, fuzzy
+msgid "Follow up Subscriptions"
+msgstr "Subscription"
+
+#: ../templates/default/confirmation2.tpl:51
+#: ../templates/default/management_subs2.tpl:80
+#: ../templates/default/management_subs2.tpl:93
+#: ../templates/default/management_subs2.tpl:138
+#: ../templates/default/management_subs.tpl:71
+msgid "Refused"
+msgstr ""
+
+#: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:11
+#: ../templates/default/menu.tpl:18
+#: ../templates/default/subs_confirmation.tpl:12
+#: ../templates/default/management_subs.tpl:23
+#: ../templates/default/follow_up_subs.tpl:10
+#: ../templates/default/send_files.tpl:41
+msgid "Subscription"
+msgstr "Subscription"
+
+#: ../templates/default/management_subs2.tpl:165
+#: ../templates/default/follow_up_subs.tpl:54
+msgid "red"
+msgstr ""
+
+#: ../templates/default/confirmation2.tpl:112
+msgid "TOTAL Amount:"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:101
+#: ../templates/default/send_files.tpl:23
+msgid "autorisation parentale"
+msgstr ""
+
+#: ../templates/default/new_subscription.tpl:103
+msgid "Estimated TOTAL"
+msgstr "Estimated TOTAL"
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+msgid "New resquest of subscription"
+msgstr "New resquest of subscription"
+
+#: ../templates/default/new_subscription.tpl:120
+msgid ""
+"*Prices are function of age and status. View details of activities for more "
+"informations"
+msgstr ""
+
+#: ../templates/default/send_files.tpl:45
+msgid "You haven't got a picture on your profile. We need one for the licence"
+msgstr ""
+
+#: ../templates/default/new_subscription.tpl:121
+msgid "You are "
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:50
+msgid "Activity subscriber message"
+msgstr ""
+
+#: ../templates/default/new_subscription.tpl:96
+msgid "view details"
+msgstr "view details"
+
+#: ../templates/default/send_files.tpl:6
+msgid "You've chosen the following activities:"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:57
+#: ../templates/default/management_groups.tpl:65
+msgid "Day"
+msgstr "Day"
+
+#: ../templates/default/management_subs2.tpl:9
+msgid "of2"
+msgstr ""
+
+#: ../management_subs.php:68
+#, fuzzy
+msgid "Subscriptions Management"
+msgstr "Groups Management"
+
+#: ../templates/default/management_subs2.tpl:123
+msgid "Activities linked"
+msgstr ""
+
+#: ../templates/default/new_subscription.tpl:9
+msgid "tick box"
+msgstr "tick box"
+
+#: ../templates/default/confirmation2.tpl:60
+msgid "Member message:"
+msgstr ""
+
+#: ../templates/default/management_subs.tpl:3
+msgid "Subscriptions have been deleted"
+msgstr ""
+
+#: ../templates/default/management_groups.tpl:89
+msgid "Actual value"
+msgstr ""
+
+#: ../templates/default/subs_confirmation.tpl:23
+#: ../templates/default/confirmation2.tpl:42
+#: ../templates/default/management_subs2.tpl:77
+#: ../templates/default/management_subs2.tpl:84
+#: ../templates/default/management_subs2.tpl:129
+#: ../templates/default/management_subs.tpl:62
+msgid "In progress"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:75
+#: ../templates/default/management_subs.tpl:8
+#: ../templates/default/management_groups.tpl:83
+msgid "Full"
+msgstr "Full"
+
+#: ../confirmation2.php:285
+#, fuzzy
+msgid "Follow up & Payment"
+msgstr "Follow up of requests"
+
+#: ../templates/default/management_subs2.tpl:180
+#: ../templates/default/management_groups.tpl:104
+msgid "Save"
+msgstr "Save"
+
+#: ../templates/default/subs_confirmation.tpl:21
+msgid "State"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:9
+msgid "of1"
+msgstr ""
+
+#: ../templates/default/confirmation2.tpl:5
+msgid "recorded on :"
+msgstr ""
+
+#: ../management_groups.php:64
+msgid "Groups Management"
+msgstr "Groups Management"
+
+#: ../templates/default/management_groups.tpl:14
+#, fuzzy
+msgid ", Number of members"
+msgstr ", Number of members:"
+
+#: ../templates/default/view_activity.tpl:69
+#: ../templates/default/management_groups.tpl:77
+msgid "Informations"
+msgstr "Informations"
+
+#: ../templates/default/new_subscription.tpl:116
+msgid "Next"
+msgstr "Next"
+
+#: ../templates/default/management_subs2.tpl:162
+#: ../templates/default/follow_up_subs.tpl:51
+msgid "green"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:27
+#: ../templates/default/management_groups.tpl:35
+msgid "Price 1"
+msgstr "Price 1"
+
+#: ../classes/activity.class.php:255
+#, fuzzy
+msgid "ACTIVITY.AJOUT ECHEC res=2"
+msgstr "ACTIVITY.AJOUT ECHEC"
+
+#: ../templates/default/management_subs2.tpl:34
+msgid "ans"
+msgstr ""
+
+#: ../templates/default/new_subscription.tpl:96
+#, fuzzy
+msgid "view details of activity"
+msgstr "view details"
+
+#: ../templates/default/follow_up_subs.tpl:21
+#, fuzzy
+msgid "Activities"
+msgstr "List of activities"
+
+#: ../templates/default/management_subs2.tpl:40
+#: ../templates/default/management_subs2.tpl:46
+#, fuzzy
+msgid "View file"
+msgstr "View details"
+
+#: ../templates/default/management_subs2.tpl:13
+msgid "Photo"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:9
+msgid "View subscriber to modify informations & photo"
+msgstr ""
+
+#: ../templates/default/menu.tpl:4 ../templates/default/menu.tpl:20
+msgid "New request"
+msgstr "New request"
+
+#: ../templates/default/subs_confirmation.tpl:40
+#, fuzzy
+msgid "Manage subcription"
+msgstr "New subsciption"
+
+#: ../templates/default/management_groups.tpl:103
+msgid "Add empty file"
+msgstr "Add empty file"
+
+#: ../templates/default/new_subscription.tpl:20
+#: ../templates/default/management_subs.tpl:40
+#: ../templates/default/follow_up_subs.tpl:24
+msgid "Details"
+msgstr "Details"
+
+#: ../templates/default/view_activity.tpl:20
+#: ../templates/default/management_groups.tpl:28
+msgid "Nobody is manager, go to group management page"
+msgstr "Nobody is manager, go to group management page"
+
+#: ../templates/default/management_groups.tpl:5
+msgid "Data aren't valid"
+msgstr "Data aren't valid"
+
+#: ../templates/default/confirmation2.tpl:5
+#, fuzzy
+msgid "Follow up of subscription"
+msgstr "New resquest of subscription"
+
+#: ../templates/default/management_subs2.tpl:82
+msgid "Actual value:"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:117
+#, fuzzy
+msgid "Estimated Total"
+msgstr "Estimated TOTAL"
+
+#: ../templates/default/management_subs2.tpl:105
+msgid "1-Enfant du Personnel Nexter et assimiles <18 ans"
+msgstr ""
+
+#: ../templates/default/menu.tpl:5 ../templates/default/menu.tpl:21
+msgid "Follow up of requests"
+msgstr "Follow up of requests"
+
+#: ../templates/default/management_subs2.tpl:9
+#, fuzzy
+msgid "Follow up the request"
+msgstr "Follow up of requests"
+
+#: ../templates/default/follow_up_subs.tpl:60
+#, fuzzy
+msgid "View follow up"
+msgstr "Follow up"
+
+#: ../templates/default/management_subs2.tpl:56
+#, fuzzy
+msgid "Subscribtion subscriber message"
+msgstr "Subscription"
+
+#: ../templates/default/management_subs.tpl:15
+#, fuzzy
+msgid "Number of subscribers:"
+msgstr "Management of subscribers"
+
+#: ../templates/default/view_activity.tpl:80
+#: ../templates/default/management_subs2.tpl:16
+#: ../templates/default/management_subs.tpl:10
+#: ../templates/default/management_groups.tpl:91
+msgid "No"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:78
+#: ../templates/default/management_subs2.tpl:20
+#: ../templates/default/management_subs.tpl:13
+#: ../templates/default/management_groups.tpl:94
+#, fuzzy
+msgid "Yes"
+msgstr "yes"
+
+#: ../templates/default/management_subs2.tpl:126
+msgid "feedback off"
+msgstr ""
+
+#: ../templates/default/view_activity.tpl:6
+msgid ""
+"-> You haven't got a picture on your profile. We need one for the licence"
+msgstr ""
+
+#: ../templates/default/management_subs.tpl:75
+msgid "View follow up & modify"
+msgstr ""
+
+#: ../templates/default/follow_up_subs.tpl:17
+#, fuzzy
+msgid "Estimated total"
+msgstr "Estimated TOTAL"
+
+#: ../templates/default/management_subs2.tpl:62
+msgid "Activity feedback"
+msgstr ""
+
+#: ../templates/default/management_subs2.tpl:126
+msgid "feedback"
+msgstr ""
+
+#: ../templates/default/management_groups.tpl:2
+msgid "Group updated"
+msgstr "Group updated"
+
+#: ../templates/default/confirmation2.tpl:48
+#: ../templates/default/management_subs2.tpl:79
+#: ../templates/default/management_subs2.tpl:90
+#: ../templates/default/management_subs2.tpl:135
+#: ../templates/default/management_subs.tpl:68
+msgid "Paid"
+msgstr ""
+
+#: ../templates/default/subs_confirmation.tpl:27
+#: ../templates/default/send_files.tpl:59
+#, fuzzy
+msgid "Estimated TOTAL:"
+msgstr "Estimated TOTAL"
+
+#: ../send_files.php:130
+#, fuzzy
+msgid "Send Files"
+msgstr "Send files"
+
+#: ../templates/default/management_subs2.tpl:74
+#: ../templates/default/management_subs.tpl:37
+msgid "Activity status"
+msgstr ""
+
+#: ../templates/default/management_subs.tpl:75
+msgid "View follow up details and modify fields"
+msgstr ""
+
+#: ../templates/default/send_files.tpl:29
+msgid "Add a message for the manager of activity"
+msgstr ""
+
+#~ msgid "AEROMODELISME"
+#~ msgstr "AEROMODELISME"
+
+#~ msgid "%membername: PDF member card"
+#~ msgstr "%membername: PDF member card"
+
+#~ msgid "TOTAL"
+#~ msgstr "TOTAL"
+
+#~ msgid "ADHESION AS"
+#~ msgstr "ADHESION AS"
+
+#~ msgid "Show associated query"
+#~ msgstr "Show associated query"
+
+#~ msgid "logs are empty"
+#~ msgstr "logs are empty"
+
+#~ msgid "PDF member card"
+#~ msgstr "PDF member card"
+
+#~ msgid "Adherent file card"
+#~ msgstr "Adherent file card"
+
+#~ msgid "x&euro;"
+#~ msgstr "x&euro;"
+
+#~ msgid "voir"
+#~ msgstr "voir"
+
+#~ msgid "Price"
+#~ msgstr "Price"
+
+#~ msgid "x"
+#~ msgstr "x"
+
+#~ msgid "COURSE A PIED "
+#~ msgstr "COURSE A PIED "

@@ -1,0 +1,1 @@
+<?php define('GALETTE_DISPLAY_ERRORS', 1);?>

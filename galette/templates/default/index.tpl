@@ -1,6 +1,9 @@
 {if $loginfault}
                 <div id="errorbox">{_T string="Login failed."}</div>
 {/if}
+{if $error_nav==1}
+                <div id="errorbox">{_T string="Pour une navigation optimum mettez &agrave; jour votre navigateur ou utilisez Chrome en version portable "}<img src="{$galette_base_path}{$subscription_tpl_dir}/images/chrome.png" alt="{_T string="navigateur performant de google"}" width=25px height=25px></div>
+{/if}
                 <form action="index.php" method="post">
                 <section>
                     <table>
