@@ -177,6 +177,43 @@ class Followup {
 		return $result;
 		}//fin de la fonction
 		
+/**  * fonction non utilisée pour l'instant
+	 * Exécute une requête SQL retirer l'adhérent du group/de l'activité. Cette méthode est appelée si le statut_act>="validé"
+     * Retourne 1 si l'adhérent a été retiré dans la table group
+	 * 0 sinon
+	 * $result=0
+	 *
+     * @param 
+     */
+    static function remove_of_group($object) 
+		{
+		global $zdb;
+		$result=0;
+		// Statut
+		$req2 = new Zend_Db_Select($zdb->db);
+		$req2->from(PREFIX_DB . Group::GROUPSUSERS_TABLE)
+				->where('id_group = ?', $object->id_act)
+				->where('id_adh = ?', $object->id_adh)
+				->limit(1, 0);
+				
+		if ($req2->query()->rowCount() == 1) 
+			{
+			$values= array(
+				'id_group = ?' => $object->id_act,
+				'id_adh = ?' => $object->id_adh
+				);
+				$del = $zdb->db->delete(PREFIX_DB .Group::GROUPSUSERS_TABLE, $values);
+				
+			$result=$del;
+			}//fin du 1er if
+		else
+			{
+				
+				$result=0;
+			}
+		return $result;
+		}//fin de la fonction
+		
 		
   /** Enregistre l'élément en cours que ce soit en insert ou update
      * 
@@ -317,7 +354,9 @@ class Followup {
         $select_id = new Zend_Db_Select($zdb->db);
         $select_id->from(PREFIX_DB . SUBSCRIPTION_PREFIX . self::TABLE)
                 ->where('id_act = ?', $object->id_act)
-				->order('id_abn');
+				//correction pour evol #37
+				->order(array('statut_act DESC','id_abn'));
+				//fin correction
         //var_dump($select_id->query()->rowCount());
 			        
         //Analog\Analog::log('test de load followup');

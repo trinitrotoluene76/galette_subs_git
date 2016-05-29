@@ -19,24 +19,24 @@
         <table class="listing adherents" >
             <thead>
                <tr>
-                    <th class="left date_row">
-						{_T string="Subscription"} N&deg;
+                    <th>
+						#
                     </th>
-                    <th class="left date_row">
+                    <th width=10%>
 						{_T string="Date"}    
                     </th>
                     
-					<th class="left date_row">
+					<th width=20%>
                         {_T string="Name"}
                     </th>
                     
-                    <th class="left">
+                    <th>
                         {_T string="Sub. status"}
                     </th>
-					 <th class="left">
+					 <th width=10%>
                         {_T string="Activity status"}
                     </th>
-					<th class="left">
+					<th width=17%>
                         {_T string="Details"}
                     </th>
                 </tr>
@@ -52,7 +52,7 @@
 						{$subscription->date_demande}
 					</td>
 					<td>
-						{$members[$id_act][$subscription->id_abn]->surname} {$members[$id_act][$subscription->id_abn]->name}
+						{$members[$id_act][$subscription->id_abn]->sname}
 					</td>
 					<td>
 						{$statuts[$id_act][$subscription->id_abn]}

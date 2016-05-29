@@ -847,29 +847,12 @@ class Adherent
                 if ( $value != '' ) {
                     switch ( $key ) {
                     // dates
-                    case 'date_crea_adh':
-                    case 'ddn_adh':
-                        try {
+					
+					//--------------------------------------->
+					//modification ajouté le 12/07/14 par Amaury Froment pour corriger le bug sur les dates du type: 14/07/0014 + bug #38 date du jour
+					case 'date_crea_adh':
+					    try {
                             $d = \DateTime::createFromFormat(_T("Y-m-d"), $value);
-							//--------------------------------------->
-							//modification ajouté le 12/07/14 par Amaury Froment pour corriger le bug sur les dates du type: 14/07/0014
-							$birthdate= \DateTime::createFromFormat('j/m/Y',$value);
-							$today= new \DateTime("now");
-							//echo('today:');
-							//var_dump($today);
-							//echo('birthdate:');
-							//var_dump($birthdate);
-							//echo('diff:');
-							$age=$birthdate->diff($today);
-							//var_dump($age->format('%R%Y'));
-
-							$age=$age->format('%Y');
-							if($age>200)
-								{
-								$d=false;
-								}
-							//-------------------------------->fin de l'ajout d'Amaury
-							
 							
 							if ( $d === false ) {
                                 //try with non localized date
@@ -899,6 +882,57 @@ class Adherent
                             );
                         }
                         break;
+                    case 'ddn_adh':
+                        try {
+                            $d = \DateTime::createFromFormat(_T("Y-m-d"), $value);
+							
+							$birthdate= \DateTime::createFromFormat('j/m/Y',$value);
+							$today= new \DateTime("now");
+							//echo('today:');
+							//var_dump($today);
+							//echo('birthdate:');
+							//var_dump($birthdate);
+							//echo('diff:');
+							$age=$birthdate->diff($today);
+							//var_dump($age->format('%R%Y'));
+
+							$age=$age->format('%Y');
+							if($age>200 || $age<1)
+								{
+								$d=false;
+								}
+									
+							
+							if ( $d === false ) {
+                                //try with non localized date
+                                $d = \DateTime::createFromFormat("Y-m-d", $value);
+                                if ( $d === false ) {
+                                    throw new \Exception('Incorrect format');
+                                }
+                            }
+                            $this->$prop = $d->format('Y-m-d');
+                        } catch (\Exception $e) {
+                            Analog::log(
+                                'Wrong date format. field: ' . $key .
+                                ', value: ' . $value . ', expected fmt: ' .
+                                _T("Y-m-d") . ' | ' . $e->getMessage(),
+                                Analog::INFO
+                            );
+                            $errors[] = str_replace(
+                                array(
+                                    '%date_format',
+                                    '%field'
+                                ),
+                                array(
+                                    _T("Y-m-d"),
+                                    $this->_fields[$key]['label']
+                                ),
+                                _T("- Wrong date format (%date_format) for %field!")
+                            );
+                        }
+                        break;
+					//-------------------------------->fin de l'ajout d'Amaury
+					
                     case 'titre_adh':
                         if ( $value !== null && $value !== '' ) {
                             if ( $value == '-1' ) {

@@ -88,6 +88,7 @@ if(isset($_POST['valid']))
 		{
 		$valid=$followup4->put_into_group($followup4);
 		}
+	
 	//var_dump($followup4);
 	
 	//si l'activité est validé, payé ou refusé, on envoi un mail à l'adhérent
