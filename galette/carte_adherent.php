@@ -62,7 +62,7 @@ if ( isset($session['filters']['members']) ) {
 } else {
     $filters = new Galette\Filters\MembersList();
 }
-//var_dump($filters);
+
 if ( isset($_GET[Galette\Entity\Adherent::PK])
     && $_GET[Galette\Entity\Adherent::PK] > 0
 ) {
