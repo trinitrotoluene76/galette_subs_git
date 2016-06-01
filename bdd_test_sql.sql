@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 14 Septembre 2015 à 22:19
+-- Généré le :  Mer 01 Juin 2016 à 22:00
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -2629,7 +2629,7 @@ CREATE TABLE IF NOT EXISTS `galette_logs` (
   `action_log` text COLLATE utf8_unicode_ci,
   `sql_log` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id_log`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `galette_logs`
@@ -2639,7 +2639,10 @@ INSERT INTO `galette_logs` (`id_log`, `date_log`, `ip_log`, `adh_log`, `text_log
 (1, '2015-09-14 22:06:48', '::1', 'amaury', '', 'Logs flushed', ''),
 (2, '2015-09-14 22:11:35', '::1', 'amaury', 'PRESIDENT', 'Fiche adhÃ©rent mise Ã  jour', ''),
 (3, '2015-09-14 22:12:13', '::1', 'amaury', 'RESPONSABLE1', 'Fiche adhÃ©rent mise Ã  jour', ''),
-(4, '2015-09-14 22:12:29', '::1', 'amaury', 'RESPONSABLE2', 'Fiche adhÃ©rent mise Ã  jour', '');
+(4, '2015-09-14 22:12:29', '::1', 'amaury', 'RESPONSABLE2', 'Fiche adhÃ©rent mise Ã  jour', ''),
+(5, '2016-06-01 21:56:15', '::1', '', 'admin', 'Ã‰chec de l''authentification', ''),
+(6, '2016-06-01 21:56:20', '::1', '', 'admin', 'Ã‰chec de l''authentification', ''),
+(7, '2016-06-01 21:56:28', '::1', 'admin', '', 'Identification', '');
 
 -- --------------------------------------------------------
 
@@ -2721,7 +2724,7 @@ CREATE TABLE IF NOT EXISTS `galette_preferences` (
 
 INSERT INTO `galette_preferences` (`id_pref`, `nom_pref`, `val_pref`) VALUES
 (1, 'pref_admin_login', 'admin'),
-(2, 'pref_admin_pass', '$2y$10$f88XlEO0QaIVcRuR6X1gseWJEqizJNbWeU.ztSOcitpLW73o9uBzq'),
+(2, 'pref_admin_pass', '$2y$10$/bnrLeQXTzEwY/c2VUefDOeEBKZTru84ki6rjzM5nTRGO6ccWavwO'),
 (3, 'pref_nom', 'Association'),
 (4, 'pref_slogan', 'Arts et Sports'),
 (5, 'pref_adresse', ''),
