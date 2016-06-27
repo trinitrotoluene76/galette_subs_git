@@ -65,7 +65,9 @@ $member = new Adherent();
 //on rempli l'Adhérent par ses caractéristiques à l'aide de son id
 $member->load($id_adh);
 //var_dump($member);
-
+//début evol #55 MAJ date dernière connexion
+$member->updateModificationDate();
+//fin evol #55
 //Fonction de traitement d'un string
 //---------------------------------------------------------------------------------->
 //between ('@', '.', 'biohazard@online.ge');

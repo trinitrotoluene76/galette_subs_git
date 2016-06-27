@@ -43,6 +43,7 @@ use Galette\Core\GaletteMail as GaletteMail;
 use Galette\Core\Password as Password;
 use Galette\Repository\Groups as Groups;
 use Galette\Repository\Members as Members;
+use Galette\Filters\MembersList as MembersList;//#evol 55
 
 /**
  * Member class for galette
@@ -1343,6 +1344,65 @@ class Adherent
             );
         }
     }
+//evol #55
+ /**
+     * Update member modification date
+     *
+     * @return void
+     */
+    public function updateModificationDate()
+    {
+        global $zdb;
+
+        try {
+            $edit = $zdb->db->update(
+                PREFIX_DB . self::TABLE,
+                array('date_modif_adh' => date('Y-m-d')),
+                self::PK . '=' . $this->_id
+            );
+            $this->_modification_date = date('Y-m-d');
+        } catch (\Exception $e) {
+            Analog::log(
+                'Something went wrong updating modif date :\'( | ' .
+                $e->getMessage() . "\n" . $e->getTraceAsString(),
+                Analog::ERROR
+            );
+        }
+    }
+	//the function istaff is not reliable for manager or staff that are not member
+	//return $staff 0/1
+	public function isStaff2()
+    {
+	 $staff=false;
+	 
+	 $filters_staff = new MembersList();
+	 $members_staff = new Members($filters_staff);
+	 $members_list_staff = $members_staff->getStaffMembersList(1,null,0,0);
+	 $adherent_staff=new Adherent();
+	 foreach ( $members_list_staff as  $keystaff => $valuestaff ) 
+		{
+		$adherent_staff=$members_list_staff[$keystaff];
+		if($this->_id==$adherent_staff->_id)
+			{
+			$staff=true;
+			}
+		}
+		
+	
+	 $groups_for_managers=array();
+	 //$groups_for_managers=Groups::getList();
+	 $groups_for_managers=Groups::loadManagedGroups($this->_id);
+	
+		if(count($groups_for_managers)>0)
+			{
+			$staff=true;
+				
+			}	
+		
+		return $staff;
+    }
+	
+//fin evol #55
 
     /**
     * Global getter method

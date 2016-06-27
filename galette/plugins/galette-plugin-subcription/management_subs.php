@@ -36,6 +36,8 @@
 define('GALETTE_BASE_PATH', '../../');
 require_once GALETTE_BASE_PATH . 'includes/galette.inc.php';
 use Galette\Entity\Adherent as Adherent;
+use Galette\Filters\MembersList as MembersList;//#evol 55
+use Galette\Repository\Members as Members;//evol #55
 use Galette\Entity\Group as Group;
 use Galette\Repository\Groups as Groups;
 use Galette\Entity\DynamicFields as DynamicFields;
@@ -357,6 +359,42 @@ if($login->isSuperAdmin() || $login->isAdmin() || $login->isStaff())
 	$statuts=array();//statuts adh
 			
 	$id_abns=array();
+	
+	//evol#55 suppression des adherents non abonnés depuis 2 ans (staff et managers de group exclus)
+	if(isset($_GET['clean_adh']))
+		{
+				
+				 $filters = new MembersList();
+				 $members2 = new Members($filters);
+				 $adherent_del=new Adherent();
+				 $members_list = $members2->getMembersList(1,null,0,0,0,0,0);
+				
+				 //creation d'une boucle
+				 foreach ( $members_list as  $keydel => $valuedel ) 
+					{
+					 $adherent_del=$members_list[$keydel];
+						 
+					if($adherent_del->isStaff2()==false)
+						{
+						//var_dump($adherent_del->modification_date);
+						 
+						$lastsubsdate= \DateTime::createFromFormat('j/m/Y',$adherent_del->modification_date);
+						$today= new \DateTime("now");
+						//echo('diff:');
+						$elapse=$lastsubsdate->diff($today);
+						//var_dump($elapse->format('%R%Y'));
+						$elapse=$elapse->format('%Y');
+						if( $elapse>=2)
+							{
+							//var_dump("delete adherent");
+							//var_dump($adherent_del->isStaff2());
+							//var_dump($adherent_del->id);
+							$members2->removeMembers($adherent_del->id);
+							}
+						}//fin if staff
+					}//fin foreach
+				
+		}//fin evol #55	
 		
 	foreach ( $groups as  $key2 => $value2 ) 
 		{
@@ -396,7 +434,7 @@ if($login->isSuperAdmin() || $login->isAdmin() || $login->isStaff())
 								$followup2->remove($followup2);
 								//var_dump('suppression du suivi de l_abn:'.$id_abn2);
 								}//fin du if
-							//si il ne reste plus qu'une acitvité, on supprime l'abonnement qui supprime le reste en cascade	
+							//si il ne reste plus qu'une activité, on supprime l'abonnement qui supprime le reste en cascade	
 							else
 								{
 								$subscription2= new Subscription;
