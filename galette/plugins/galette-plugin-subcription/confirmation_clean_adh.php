@@ -86,17 +86,18 @@ require_once '_config.inc.php';
 				$elapse=$lastsubsdate->diff($today);
 				//var_dump($elapse->format('%R%Y'));
 				$elapse=$elapse->format('%Y');
-				if( $elapse>=1)
-				//if( $elapse>=2)
+				//if( $elapse>=1)
+				if( $elapse>=2)
 					{
 					$members[$keydel]=$adherent_del;
 					}
 				}//fin if staff
 			}//fin foreach
-				
+			$countmb=count($members);
 
 $tpl->assign('page_title', _T("Confirmation to clean members"));
 $tpl->assign('members', $members);
+$tpl->assign('countmb', $countmb);
 //var_dump($members);
 
 //Set the path to the current plugin's templates,
