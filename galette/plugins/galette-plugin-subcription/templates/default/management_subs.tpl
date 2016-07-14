@@ -5,7 +5,9 @@
 	{/foreach}
 	<option  value="{$galette_base_path}{$subscription_dir}management_subs.php?id_act=all&nbligne=2" {if $id_act_s==""}selected="selected"{/if}>{_T string="All"}</option>
 </select>
-	
+{if $login->isAdmin() == 1}
+	<a id="histreset" class="button" href="{$galette_base_path}{$subscription_dir}confirmation_clean_adh.php" title="{_T string="Delete members that haven't subscribed to the parent activity during 2 years or that haven't modified their profile"}">{_T string="Clean adh DB"}</a>
+{/if}
 {foreach from=$activities key=id_act item=value}	
 
 	{if $id_act_s==$id_act||$id_act_s==""}
