@@ -25,9 +25,10 @@ msgstr ""
 msgid "Status"
 msgstr "Statut"
 
-#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
-msgid "New request"
-msgstr "Nouvelle demande"
+#: ../templates/default/view_activity.tpl:10
+#: ../templates/default/management_groups.tpl:18
+msgid "Manager"
+msgstr "Responsable"
 
 #: ../templates/default/management_subs2.tpl:27
 #: ../templates/default/management_subs2.tpl:29
@@ -47,7 +48,7 @@ msgstr "Uploader votre fichier rempli"
 #: ../templates/default/management_subs2.tpl:81
 #: ../templates/default/management_subs2.tpl:90
 #: ../templates/default/management_subs2.tpl:135
-#: ../templates/default/management_subs.tpl:115
+#: ../templates/default/management_subs.tpl:117
 msgid "Validated"
 msgstr "Validé"
 
@@ -63,7 +64,7 @@ msgstr "Montant dû"
 msgid "New subsciption"
 msgstr "Nouvel abonnement"
 
-#: ../templates/default/management_subs.tpl:136
+#: ../templates/default/management_subs.tpl:138
 msgid ""
 "Delete subscriptions for this activity only, files of subscribers for this "
 "activity and remove subscribers from the group"
@@ -71,9 +72,9 @@ msgstr ""
 "Supprime seulement les abonnements de cette activité, les fichiers des "
 "adhérents de cette activité et retire les adhérents de ce groupe"
 
-#: ../templates/default/confirmation2.tpl:22
-msgid "Answer of staff"
-msgstr "Réponse du bureau"
+#: ../templates/default/send_files_standalone.tpl:159
+msgid "Personnal files of group:"
+msgstr "Fichiers personnels du groupe:"
 
 #: ../templates/default/view_activity.tpl:90
 #: ../templates/default/send_files.tpl:26
@@ -97,19 +98,17 @@ msgstr "Gestion des groupes par le bureau"
 msgid "2. Add a description"
 msgstr "2. Ajoutez une description"
 
-#: ../subs_confirmation.php:271 ../templates/default/subs_confirmation.tpl:2
-#: ../templates/default/new_subscription.tpl:2
+#: ../subs_confirmation.php:273 ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
-#: ../templates/default/follow_up_subs.tpl:2
 #: ../templates/default/send_files.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/subs_confirmation.tpl:2
 msgid "Validation"
 msgstr "Validation"
 
-#: ../templates/default/subs_confirmation.tpl:33
-#: ../templates/default/management_subs2.tpl:168
-#: ../templates/default/follow_up_subs.tpl:57
-msgid "At least one activity is refused"
-msgstr "Au moins une activité est refusée"
+#: ../templates/default/management_subs2.tpl:102
+msgid "Price category"
+msgstr "Catégorie tarifaire"
 
 #: ../templates/default/send_files.tpl:142
 msgid "Cancel my request"
@@ -127,15 +126,14 @@ msgstr "Gestion des abonnés"
 msgid "Subscription message:"
 msgstr "Message lié à l'abonnement:"
 
-#: ../templates/default/send_files_standalone.tpl:83
-#: ../templates/default/management_groups.tpl:114
-#: ../templates/default/management_groups.tpl:131
-msgid "yes"
-msgstr "oui"
+#: ../templates/default/confirmation2.tpl:39
+msgid "Add/view file"
+msgstr "Ajoutez/voir les fichiers"
 
-#: ../templates/default/management_subs.tpl:63
-#: ../templates/default/management_subs.tpl:66
-#: ../templates/default/management_subs.tpl:69
+#: ../templates/default/confirmation_clean_adh.tpl:20
+#: ../templates/default/management_subs.tpl:65
+#: ../templates/default/management_subs.tpl:68
+#: ../templates/default/management_subs.tpl:71
 msgid "Name"
 msgstr "Nom"
 
@@ -143,19 +141,23 @@ msgstr "Nom"
 msgid "folder"
 msgstr "répertoire"
 
-#: ../templates/default/management_subs.tpl:75
-msgid "Sub. status"
-msgstr "Statut de l'abonné"
+#: ../templates/default/confirmation_reset_saison.tpl:1
+msgid ""
+"Do you really want to delete subscriptions for this activity only, files of "
+"subscribers for this activity and remove subscribers from the group?"
+msgstr ""
+"Voulez vous vraiment supprimer les abonnements, les fichiers des adhérents "
+"concernant cette activité et retirer les adhérents de ce groupe?"
 
 #: ../templates/default/menu.tpl:10 ../templates/default/menu.tpl:32
 msgid "Follow up of requests"
 msgstr "Suivi des demandes"
 
-#: ../templates/default/subs_confirmation.tpl:2
 #: ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
-#: ../templates/default/follow_up_subs.tpl:2
 #: ../templates/default/send_files.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/subs_confirmation.tpl:2
 msgid "Send files"
 msgstr "Envoyer des fichiers"
 
@@ -163,11 +165,13 @@ msgstr "Envoyer des fichiers"
 msgid "Subscriber added to group:"
 msgstr "Abonné ajouté au groupe:"
 
-#: ../templates/default/subs_confirmation.tpl:29
-#: ../templates/default/management_subs2.tpl:165
-#: ../templates/default/follow_up_subs.tpl:53
-msgid "All activities are payed"
-msgstr "Toutes les activités sont payées"
+#: ../templates/default/confirmation_reset_saison.tpl:3
+#: ../templates/default/send_files_standalone.tpl:93
+#: ../templates/default/management_subs2.tpl:179
+#: ../templates/default/confirmation_clean_adh.tpl:4
+#: ../templates/default/confirmation_clean_adh.tpl:49
+msgid "Previous"
+msgstr "Précédent"
 
 #: ../templates/default/send_files.tpl:125
 msgid "Add a message for subscription"
@@ -191,14 +195,9 @@ msgstr "Voir l'Activité"
 msgid "Activity feedback off"
 msgstr "Feedback de l'activité (off)"
 
-#: ../templates/default/view_files.tpl:31
-#: ../templates/default/view_files.tpl:55
-#: ../templates/default/send_files_standalone.tpl:120
-#: ../templates/default/send_files_standalone.tpl:146
-#: ../templates/default/send_files_standalone.tpl:178
-#: ../templates/default/send_files_standalone.tpl:201
-msgid "Delete"
-msgstr "Supprimer"
+#: ../templates/default/confirmation2.tpl:5
+msgid "Follow up of subscription"
+msgstr "Suivi d'abonnement"
 
 #: ../templates/default/management_subs2.tpl:181
 msgid "View transactions"
@@ -214,49 +213,45 @@ msgstr "Tarif 3"
 msgid "Send my request"
 msgstr "Envoyer ma demande"
 
-#: ../templates/default/management_subs2.tpl:120
-msgid "Estimated Total"
-msgstr "Total estimé"
-
-#: ../templates/default/subs_confirmation.tpl:2
 #: ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
-#: ../templates/default/follow_up_subs.tpl:2
 #: ../templates/default/send_files.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/subs_confirmation.tpl:2
 msgid "Form"
 msgstr "Formulaire"
 
-#: ../templates/default/subs_confirmation.tpl:15
-#: ../templates/default/view_files.tpl:28
 #: ../templates/default/send_files_standalone.tpl:172
-#: ../templates/default/management_subs.tpl:51
-#: ../templates/default/management_subs.tpl:54
-#: ../templates/default/management_subs.tpl:57
+#: ../templates/default/view_files.tpl:28
 #: ../templates/default/follow_up_subs.tpl:13
+#: ../templates/default/management_subs.tpl:53
+#: ../templates/default/management_subs.tpl:56
+#: ../templates/default/management_subs.tpl:59
+#: ../templates/default/subs_confirmation.tpl:15
 msgid "Date"
 msgstr "Date"
 
-#: ../templates/default/subs_confirmation.tpl:24
-#: ../templates/default/management_subs2.tpl:162
-#: ../templates/default/follow_up_subs.tpl:48
-msgid "orange"
-msgstr "orange"
+#: ../classes/followup.class.php:173
+msgid "followup.group.AJOUT ECHEC"
+msgstr ""
 
 #: ../templates/default/view_files.tpl:14
 msgid "id"
 msgstr "Id"
-
-#: ../templates/default/send_files_standalone.tpl:93
-#: ../templates/default/management_subs2.tpl:179
-#: ../templates/default/confirmation_reset_saison.tpl:3
-msgid "Previous"
-msgstr "Précédent"
 
 #: ../templates/default/send_files_standalone.tpl:82
 #: ../templates/default/management_groups.tpl:113
 #: ../templates/default/management_groups.tpl:130
 msgid "no"
 msgstr "non"
+
+#: ../templates/default/management_subs.tpl:9
+msgid ""
+"Delete members that haven't subscribed to the parent activity during 2 years "
+"or that haven't modified their profile"
+msgstr ""
+"Supprime les adhérents qui ne se sont pas inscrit à l'activité parente ou "
+"qui n'ont pas modifié leur profil depuis 2 ans"
 
 #: ../classes/subscription.class.php:174
 msgid "Subscription.AJOUT update ECHEC"
@@ -270,25 +265,30 @@ msgstr "Voir les contributions"
 msgid "Follow up"
 msgstr "Suivi de mes abonnements"
 
-#: ../templates/default/view_files.tpl:67
-#: ../templates/default/view_activity.tpl:106
-msgid "Close"
-msgstr "Fermer"
+#: ../templates/default/send_files_standalone.tpl:65
+#: ../templates/default/send_files.tpl:89
+msgid ""
+"We detect that your web browser doesn't accept javascript, please configure "
+"it to accept this. Then, you are permitted to upload files"
+msgstr ""
+"Nous détectons que votre navigateur web n'accepte pas le javascript, merci "
+"de le configurer pour qu'il les accepte. Vous pourez alors uploader des "
+"fichiers"
 
 #: ../templates/default/view_files.tpl:63
 msgid "You doesn't have any files"
 msgstr "Vous n'avez aucun fichier"
 
-#: ../templates/default/view_activity.tpl:7
-#: ../templates/default/send_files.tpl:119
-msgid "Add picture on my profile"
-msgstr "Ajouter une photo à mon profil"
+#: ../templates/default/send_files_standalone.tpl:109
+#: ../templates/default/send_files_standalone.tpl:165
+msgid "Link"
+msgstr "Lien"
 
-#: ../templates/default/subs_confirmation.tpl:2
 #: ../templates/default/new_subscription.tpl:2
 #: ../templates/default/confirmation2.tpl:2
-#: ../templates/default/follow_up_subs.tpl:2
 #: ../templates/default/send_files.tpl:2
+#: ../templates/default/follow_up_subs.tpl:2
+#: ../templates/default/subs_confirmation.tpl:2
 msgid "Payement"
 msgstr "Payement"
 
@@ -297,8 +297,8 @@ msgstr "Payement"
 msgid "List of activities"
 msgstr "Liste des activités"
 
-#: ../templates/default/view_files.tpl:2
 #: ../templates/default/send_files_standalone.tpl:2
+#: ../templates/default/view_files.tpl:2
 msgid "File deleted"
 msgstr "Fichier supprimé"
 
@@ -324,10 +324,6 @@ msgstr "L'abonnement a été envoyé au bureau pour validation"
 msgid "Price 2"
 msgstr "Tarif 2"
 
-#: ../templates/default/send_files.tpl:6
-msgid "You've chosen the following activities:"
-msgstr "Vous avez choisi les activités suivantes:"
-
 #: ../templates/default/new_subscription.tpl:16
 #: ../templates/default/about_group.tpl:12
 msgid "Price* (&euro;)"
@@ -337,9 +333,11 @@ msgstr "Tarif* (&euro;)"
 msgid "My files"
 msgstr "Mes fichiers"
 
-#: ../templates/default/confirmation2.tpl:39
-msgid "Add/view file"
-msgstr "Ajoutez/voir les fichiers"
+#: ../templates/default/send_files_standalone.tpl:83
+#: ../templates/default/management_groups.tpl:114
+#: ../templates/default/management_groups.tpl:131
+msgid "yes"
+msgstr "oui"
 
 #: ../classes/file.class.php:185 ../classes/file.class.php:196
 msgid "file.AJOUT ECHEC"
@@ -357,22 +355,29 @@ msgstr "Gestion des groupes"
 msgid "1. Send your file"
 msgstr "1. Envoyez votre fichier"
 
-#: ../management_subs.php:347
+#: ../management_subs.php:349
 msgid "Subscriptions Management for staff"
 msgstr "Gestion des Abonnements par le Bureau"
 
-#: ../classes/subscription.class.php:160
-msgid "Subscription.AJOUT insert ECHEC"
-msgstr ""
+#: ../templates/default/new_subscription.tpl:20
+#: ../templates/default/follow_up_subs.tpl:24
+#: ../templates/default/about_group.tpl:16
+#: ../templates/default/management_subs.tpl:92
+msgid "Details"
+msgstr "Détails"
 
 #: ../templates/default/confirmation2.tpl:66
 msgid "You can pay for this activity"
 msgstr "Vous pouvez payer pour cette activité"
 
-#: ../templates/default/view_files.tpl:5
 #: ../templates/default/send_files_standalone.tpl:5
+#: ../templates/default/view_files.tpl:5
 msgid "Your file hasn't been found"
 msgstr "Votre fichier n'a pas été trouvé"
+
+#: ../templates/default/management_groups.tpl:147
+msgid "Add/view files or forms for the group"
+msgstr "Ajouter/voir des fichiers ou des formulaires pour le groupe"
 
 #: ../templates/default/management_subs2.tpl:40
 msgid "Subscriber status"
@@ -388,7 +393,7 @@ msgstr ""
 
 #: ../templates/default/view_files.tpl:21
 #: ../templates/default/confirmation2.tpl:12
-#: ../templates/default/management_subs.tpl:23
+#: ../templates/default/management_subs.tpl:25
 msgid "Activity"
 msgstr "Activité"
 
@@ -401,9 +406,11 @@ msgstr "Vous avez "
 msgid "View follow up"
 msgstr "Voir le suivi"
 
-#: ../classes/followup.class.php:173
-msgid "followup.group.AJOUT ECHEC"
-msgstr ""
+#: ../templates/default/management_subs2.tpl:162
+#: ../templates/default/follow_up_subs.tpl:48
+#: ../templates/default/subs_confirmation.tpl:24
+msgid "orange"
+msgstr "orange"
 
 #: ../follow_up_subs.php:157
 msgid "Follow up Subscriptions"
@@ -414,22 +421,22 @@ msgstr "Suivi des Abonnements"
 #: ../templates/default/management_subs2.tpl:83
 #: ../templates/default/management_subs2.tpl:96
 #: ../templates/default/management_subs2.tpl:141
-#: ../templates/default/management_subs.tpl:121
+#: ../templates/default/management_subs.tpl:123
 msgid "Refused"
 msgstr "Refusé"
 
 #: ../templates/default/menu.tpl:7 ../templates/default/menu.tpl:19
 #: ../templates/default/menu.tpl:29
-#: ../templates/default/subs_confirmation.tpl:12
 #: ../templates/default/send_files_standalone.tpl:175
-#: ../templates/default/follow_up_subs.tpl:10
 #: ../templates/default/send_files.tpl:113
+#: ../templates/default/follow_up_subs.tpl:10
+#: ../templates/default/subs_confirmation.tpl:12
 msgid "Subscription"
 msgstr "Abonnement"
 
-#: ../templates/default/subs_confirmation.tpl:32
 #: ../templates/default/management_subs2.tpl:168
 #: ../templates/default/follow_up_subs.tpl:56
+#: ../templates/default/subs_confirmation.tpl:32
 msgid "red"
 msgstr "rouge"
 
@@ -449,9 +456,9 @@ msgstr "Montant TOTAL:"
 msgid "Estimated TOTAL"
 msgstr "TOTAL estimé"
 
-#: ../templates/default/subs_confirmation.tpl:25
 #: ../templates/default/management_subs2.tpl:162
 #: ../templates/default/follow_up_subs.tpl:49
+#: ../templates/default/subs_confirmation.tpl:25
 msgid "At least one activity is on progress or validated but not payed"
 msgstr "Au moins une activité est en cours ou validé mais pas payé"
 
@@ -468,11 +475,11 @@ msgstr ""
 "*Les tarifs sont fonction de l'age et du statut. Voir les détails des "
 "activités pour plus d'informations"
 
-#: ../templates/default/send_files_standalone.tpl:159
-msgid "Personnal files of group:"
-msgstr "Fichiers personnels du groupe:"
+#: ../templates/default/confirmation2.tpl:22
+msgid "Answer of staff"
+msgstr "Réponse du bureau"
 
-#: ../templates/default/management_subs.tpl:136
+#: ../templates/default/management_subs.tpl:138
 msgid "New Sport Season"
 msgstr "Nouvelle Saison Sportive"
 
@@ -499,14 +506,23 @@ msgstr "voir les détails"
 msgid "Auto validation"
 msgstr "Auto validation"
 
-#: ../templates/default/management_subs.tpl:13
-msgid "Subscriptions have been deleted"
-msgstr "Les abonnements ont été supprimés"
+#: ../templates/default/send_files.tpl:6
+msgid "You've chosen the following activities:"
+msgstr "Vous avez choisi les activités suivantes:"
 
 #: ../templates/default/view_activity.tpl:57
 #: ../templates/default/management_groups.tpl:92
 msgid "Day"
 msgstr "Jour"
+
+#: ../templates/default/confirmation_clean_adh.tpl:2
+msgid ""
+"Do you really want to delete this members? (They haven't subscribed to the "
+"parent activity nor modified their profile since more than 2 years)"
+msgstr ""
+"Voullez vous vraiment supprimer le profil de ces adhérents? (Ils ne se sont "
+"pas inscrit à l'activité parente ou ils n'ont pas modifié leur profil depuis "
+"2 ans)"
 
 #: ../templates/default/management_subs2.tpl:14
 #: ../templates/default/management_subs2.tpl:16
@@ -517,7 +533,7 @@ msgstr "de"
 msgid "File name to fill up"
 msgstr "Nom du fichier à remplir"
 
-#: ../management_subs.php:74
+#: ../management_subs.php:76
 msgid "Subscriptions Management"
 msgstr "Gestion des Abonnements"
 
@@ -542,7 +558,7 @@ msgstr "A propos des groupes"
 msgid "Add/view files"
 msgstr "Ajoutez/voir les fichiers"
 
-#: ../templates/default/management_subs.tpl:203
+#: ../templates/default/management_subs.tpl:205
 msgid "Number of lignes: "
 msgstr "Nombre de lignes"
 
@@ -555,8 +571,17 @@ msgstr "Valeur actuelle"
 msgid "Confirmation for a new saison"
 msgstr "Confirmation pour une nouvelle saison"
 
+#: ../templates/default/confirmation2.tpl:44
+#: ../templates/default/confirmation2.tpl:93
+#: ../templates/default/management_subs2.tpl:80
+#: ../templates/default/management_subs2.tpl:87
+#: ../templates/default/management_subs2.tpl:132
+#: ../templates/default/management_subs.tpl:114
+msgid "In progress"
+msgstr "En cours"
+
 #: ../templates/default/view_activity.tpl:75
-#: ../templates/default/management_subs.tpl:24
+#: ../templates/default/management_subs.tpl:26
 #: ../templates/default/management_groups.tpl:110
 msgid "Full"
 msgstr "Complet"
@@ -579,6 +604,12 @@ msgstr "Enregistrer"
 msgid "State"
 msgstr "Etat"
 
+#: ../templates/default/management_subs2.tpl:168
+#: ../templates/default/follow_up_subs.tpl:57
+#: ../templates/default/subs_confirmation.tpl:33
+msgid "At least one activity is refused"
+msgstr "Au moins une activité est refusée"
+
 #: ../templates/default/management_subs2.tpl:14
 #: ../templates/default/management_subs2.tpl:16
 msgid "of1"
@@ -588,27 +619,24 @@ msgstr "du"
 msgid "recorded on :"
 msgstr "enregistré le :"
 
-#: ../templates/default/management_subs2.tpl:102
-msgid "Price category"
-msgstr "Catégorie tarifaire"
+#: ../classes/subscription.class.php:160
+msgid "Subscription.AJOUT insert ECHEC"
+msgstr ""
 
 #: ../management_groups.php:71
 msgid "Groups Management"
 msgstr "Gestion des Groupes"
 
-#: ../templates/default/send_files_standalone.tpl:13
-msgid "Add file by fill up this panel for the group:"
-msgstr "Ajoutez un fichier en remplissant cette page pour le groupe:"
+#: ../templates/default/send_files.tpl:131
+#: ../templates/default/subs_confirmation.tpl:38
+msgid "Estimated TOTAL:"
+msgstr "TOTAL estimé:"
 
-#: ../templates/default/send_files_standalone.tpl:65
-#: ../templates/default/send_files.tpl:89
-msgid ""
-"We detect that your web browser doesn't accept javascript, please configure "
-"it to accept this. Then, you are permitted to upload files"
-msgstr ""
-"Nous détectons que votre navigateur web n'accepte pas le javascript, merci "
-"de le configurer pour qu'il les accepte. Vous pourez alors uploader des "
-"fichiers"
+#: ../templates/default/view_files.tpl:67
+#: ../templates/default/view_activity.tpl:106
+#: ../templates/default/export_subs.tpl:5
+msgid "Close"
+msgstr "Fermer"
 
 #: ../templates/default/menu.tpl:2 ../templates/default/menu.tpl:15
 #: ../templates/default/menu.tpl:25 ../templates/default/view_activity.tpl:69
@@ -625,13 +653,13 @@ msgid "Subs"
 msgstr "Abonnement"
 
 #: ../templates/default/management_subs.tpl:6
-#: ../templates/default/management_subs.tpl:208
+#: ../templates/default/management_subs.tpl:210
 msgid "All"
 msgstr "Tout"
 
-#: ../templates/default/subs_confirmation.tpl:28
 #: ../templates/default/management_subs2.tpl:165
 #: ../templates/default/follow_up_subs.tpl:52
+#: ../templates/default/subs_confirmation.tpl:28
 msgid "green"
 msgstr "vert"
 
@@ -645,27 +673,31 @@ msgstr "Tarif 1"
 msgid "ACTIVITY.AJOUT ECHEC res=2"
 msgstr ""
 
-#: ../templates/default/send_files_standalone.tpl:109
-#: ../templates/default/send_files_standalone.tpl:165
-msgid "Link"
-msgstr "Lien"
+#: ../templates/default/view_activity.tpl:7
+#: ../templates/default/send_files.tpl:119
+msgid "Add picture on my profile"
+msgstr "Ajouter une photo à mon profil"
 
 #: ../templates/default/management_subs2.tpl:48
 msgid "ans"
 msgstr "ans"
 
-#: ../templates/default/confirmation2.tpl:44
-#: ../templates/default/confirmation2.tpl:93
-#: ../templates/default/management_subs2.tpl:80
-#: ../templates/default/management_subs2.tpl:87
-#: ../templates/default/management_subs2.tpl:132
-#: ../templates/default/management_subs.tpl:112
-msgid "In progress"
-msgstr "En cours"
+#: ../templates/default/send_files_standalone.tpl:138
+#: ../templates/default/view_activity.tpl:80
+#: ../templates/default/management_subs2.tpl:25
+#: ../templates/default/management_subs.tpl:28
+#: ../templates/default/management_groups.tpl:118
+#: ../templates/default/management_groups.tpl:135
+msgid "No"
+msgstr "Non"
 
 #: ../templates/default/follow_up_subs.tpl:21
 msgid "Activities"
 msgstr "Activités"
+
+#: ../templates/default/management_subs.tpl:15
+msgid "Subscriptions have been deleted"
+msgstr "Les abonnements ont été supprimés"
 
 #: ../templates/default/management_subs2.tpl:22
 msgid "Photo"
@@ -676,25 +708,31 @@ msgstr "Photo"
 msgid "View subscriber to modify informations & photo"
 msgstr "Voir l'abonné pour modifier ses informations et sa photo"
 
-#: ../templates/default/view_activity.tpl:10
-#: ../templates/default/management_groups.tpl:18
-msgid "Manager"
-msgstr "Responsable"
+#: ../templates/default/menu.tpl:9 ../templates/default/menu.tpl:31
+msgid "New request"
+msgstr "Nouvelle demande"
 
 #: ../templates/default/subs_confirmation.tpl:51
 msgid "Manage subcription"
 msgstr "Gestion de l'abonnement"
 
+#: ../templates/default/management_subs2.tpl:165
+#: ../templates/default/follow_up_subs.tpl:53
+#: ../templates/default/subs_confirmation.tpl:29
+msgid "All activities are payed"
+msgstr "Toutes les activités sont payées"
+
 #: ../templates/default/management_subs2.tpl:129
 msgid "feedback off"
 msgstr "Feedback de l'activité (off)"
 
-#: ../templates/default/new_subscription.tpl:20
-#: ../templates/default/about_group.tpl:16
-#: ../templates/default/management_subs.tpl:90
-#: ../templates/default/follow_up_subs.tpl:24
-msgid "Details"
-msgstr "Détails"
+#: ../export_subs.php:146
+msgid "Export"
+msgstr "Export"
+
+#: ../confirmation_clean_adh.php:98
+msgid "Confirmation to clean members"
+msgstr "Confirmation de néttoyage de la base d'adhérents"
 
 #: ../templates/default/view_activity.tpl:20
 #: ../templates/default/management_groups.tpl:28
@@ -705,22 +743,22 @@ msgstr "Aucun responsable, allez à la page de gestion des groupes"
 msgid "Data aren't valid"
 msgstr "Les données sont invalides"
 
-#: ../templates/default/confirmation2.tpl:5
-msgid "Follow up of subscription"
-msgstr "Suivi d'abonnement"
+#: ../templates/default/send_files_standalone.tpl:120
+#: ../templates/default/send_files_standalone.tpl:146
+#: ../templates/default/send_files_standalone.tpl:178
+#: ../templates/default/send_files_standalone.tpl:201
+#: ../templates/default/view_files.tpl:31
+#: ../templates/default/view_files.tpl:55
+msgid "Delete"
+msgstr "Supprimer"
 
 #: ../templates/default/management_subs2.tpl:85
 msgid "Actual value:"
 msgstr "Valeur actuelle:"
 
-#: ../templates/default/view_activity.tpl:80
-#: ../templates/default/send_files_standalone.tpl:138
-#: ../templates/default/management_subs2.tpl:25
-#: ../templates/default/management_subs.tpl:26
-#: ../templates/default/management_groups.tpl:118
-#: ../templates/default/management_groups.tpl:135
-msgid "No"
-msgstr "Non"
+#: ../templates/default/management_subs2.tpl:120
+msgid "Estimated Total"
+msgstr "Total estimé"
 
 #: ../templates/default/management_groups.tpl:14
 msgid ", Number of members"
@@ -731,13 +769,17 @@ msgstr ", Nombre d'inscrits"
 msgid "year old and your status is:"
 msgstr "ans et votre statut est:"
 
-#: ../templates/default/confirmation_reset_saison.tpl:1
+#: ../templates/default/management_subs.tpl:77
+msgid "Sub. status"
+msgstr "Statut de l'abonné"
+
+#: ../templates/default/confirmation_clean_adh.tpl:47
 msgid ""
-"Do you really want to delete subscriptions for this activity only, files of "
-"subscribers for this activity and remove subscribers from the group?"
+"There is no member to delete. ( No member they haven't subscribed to the "
+"parent activity nor modified their profile since more than 2 years)"
 msgstr ""
-"Voulez vous vraiment supprimer les abonnements, les fichiers des adhérents "
-"concernant cette activité et retirer les adhérents de ce groupe?"
+"Il n'y a aucun adhérent à supprimer. (Aucun adhérent ne s'étant inscrit à "
+"l'activité parente ou ayant modifié son profil depuis 2 ans)"
 
 #: ../templates/default/view_activity.tpl:51
 #: ../templates/default/management_groups.tpl:86
@@ -749,9 +791,9 @@ msgstr "Lieu"
 msgid "Follow up the request"
 msgstr "Suivi de la demande"
 
-#: ../templates/default/management_groups.tpl:147
-msgid "Add/view files or forms for the group"
-msgstr "Ajouter/voir des fichiers ou des formulaires pour le groupe"
+#: ../templates/default/confirmation_clean_adh.tpl:24
+msgid "Modification date or last subscription"
+msgstr "Date de modification ou dernier abonnement"
 
 #: ../templates/default/send_files_standalone.tpl:57
 #: ../templates/default/send_files.tpl:81
@@ -767,7 +809,7 @@ msgstr ""
 msgid "Subscribtion subscriber message"
 msgstr "Message de l'abonné pour l'abonnement"
 
-#: ../templates/default/management_subs.tpl:31
+#: ../templates/default/management_subs.tpl:33
 msgid "Number of subscribers:"
 msgstr "Nombre d'abonnés:"
 
@@ -780,13 +822,14 @@ msgstr "voir les détails de l'activité"
 msgid "Form to fill up?"
 msgstr "Formulaire à remplir?"
 
-#: ../templates/default/view_activity.tpl:78
+#: ../templates/default/confirmation_reset_saison.tpl:4
 #: ../templates/default/send_files_standalone.tpl:141
+#: ../templates/default/view_activity.tpl:78
 #: ../templates/default/management_subs2.tpl:34
-#: ../templates/default/management_subs.tpl:29
+#: ../templates/default/confirmation_clean_adh.tpl:5
+#: ../templates/default/management_subs.tpl:31
 #: ../templates/default/management_groups.tpl:121
 #: ../templates/default/management_groups.tpl:138
-#: ../templates/default/confirmation_reset_saison.tpl:4
 msgid "Yes"
 msgstr "Oui"
 
@@ -801,7 +844,7 @@ msgstr ""
 "-> Vous n'avez pas de photo dans votre profil. Nous en avons besoin pour la "
 "license"
 
-#: ../templates/default/management_subs.tpl:125
+#: ../templates/default/management_subs.tpl:127
 msgid "View follow up & modify"
 msgstr "Voir le suivi et modifier"
 
@@ -826,33 +869,40 @@ msgstr "Groupe mis à jour"
 #: ../templates/default/management_subs2.tpl:82
 #: ../templates/default/management_subs2.tpl:93
 #: ../templates/default/management_subs2.tpl:138
-#: ../templates/default/management_subs.tpl:118
+#: ../templates/default/management_subs.tpl:120
 msgid "Paid"
 msgstr "Payé"
 
-#: ../templates/default/subs_confirmation.tpl:38
-#: ../templates/default/send_files.tpl:131
-msgid "Estimated TOTAL:"
-msgstr "TOTAL estimé:"
+#: ../templates/default/send_files_standalone.tpl:13
+msgid "Add file by fill up this panel for the group:"
+msgstr "Ajoutez un fichier en remplissant cette page pour le groupe:"
 
 #: ../send_files.php:129
 msgid "Send Files"
 msgstr "Envoyer des fichiers"
 
 #: ../templates/default/management_subs2.tpl:77
-#: ../templates/default/management_subs.tpl:79
-#: ../templates/default/management_subs.tpl:82
-#: ../templates/default/management_subs.tpl:85
+#: ../templates/default/management_subs.tpl:81
+#: ../templates/default/management_subs.tpl:84
+#: ../templates/default/management_subs.tpl:87
 msgid "Activity status"
 msgstr "Statut de l'activité"
+
+#: ../templates/default/management_subs.tpl:9
+msgid "Clean adh DB"
+msgstr "Clean adh bdd"
 
 #: ../templates/default/view_files.tpl:17
 msgid "Doc name"
 msgstr "Nom du fichier"
 
-#: ../templates/default/management_subs.tpl:125
+#: ../templates/default/management_subs.tpl:127
 msgid "View follow up details and modify fields"
 msgstr "Voir le détail du suivi et modifier les champs"
+
+#: ../templates/default/confirmation_clean_adh.tpl:9
+msgid "Members list to delete"
+msgstr "Liste des membres à supprimer"
 
 #~ msgid ""
 #~ "Please update your browser or use an alternative one, like Mozilla "
