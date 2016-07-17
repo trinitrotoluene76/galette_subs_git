@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Export for Subscribtion plugin
+ * Export for Subscribtion plugin. ATTENTION CE FICHIER EST SPECIFIQUE AS NEXTER POUR L'INSTANT.
  *
  * PHP version 5
  *
@@ -79,17 +79,23 @@ else
 $id_act=0;
 }
 
-//Liste des abonnements de la muscu (avec l'appartenance et le statut de l'abn):
+//Création des fichiers excel au chargement de cette page.
+
+//Liste des abonnements de la section concernée (avec l'appartenance et le statut de l'abn RAJOUTER données de l'objet subscription):
+//fichier nommé: liste_abn_appartenance_statut_'.$id_act.'.csv'
 $select = new Zend_Db_Select($zdb->db);
-        $select->from(array('f2' => 'galette_subscription_followup'),array('f2.*'))
+        $select->from(array('f2' => 'galette_subscription_followup'),array('f2.*'))//donne le statut de l'abonnement
+		->join(array('s' => 'galette_subscription_subscriptions'), 's.id_abn=f2.id_abn',array('s.*'))
 		->join(array('d' => 'galette_dynamic_fields'), 'd.item_id=f2.id_adh',array())
-		->join(array('f' => 'galette_field_contents_5'), 'f.id=d.field_val' ,array('f.val'))
+		->join(array('f' => 'galette_field_contents_5'), 'f.id=d.field_val' ,array('f.val'))//contenu du champ appartenance (Personnel Nexter ou conjoint, Famille Nexter (enfant), Extérieur...)
 		->join(array('a' => 'galette_adherents'), 'a.id_adh=f2.id_adh' ,array('a.*'))
-		->where('f2.id_act = ?', $id_act)
-		->where('d.field_id = ?', '5')
+		->where('f2.id_act = ?', $id_act)//filtre sur l'activité concernée
+		->where('d.field_id = ?', '5')//filtre sur le champ dynamique 5 = appartenance
 		->group('f2.id_abn');
     $result = $select->query()->fetchAll(Zend_Db::FETCH_ASSOC);
- 
+	//ajout des entetes
+	array_unshift($result,array ('id_act','id_adh','id_abn (identifiant de l\'abonnement)','statut_act: 0=en cours, 1=validé, 2=payé, 3=refusé','feedback act','message adh act (Message de l\'abonné pour l\'activité)','feedback off','date de la demande d\'abonnement', 'total estimmé lors de l\'abonnement','message de l\'abonné concernant l\'abonnement','Appartenance','id_statut','nom_adh','prenom_adh','pseudo','société','titre adh','date de naissance','sexe (0=non spécifié, 1=M, 2=F)','adresse','adresse2','code postal','ville','pays','tel','gsm','mail','url','icq','msn','jabber','info','info publique','profession','login','mdp','date de création du profil','date de modification du profil','activite_adh','bool admin','bool exempt','bool display','date echeance','pref lanque','lieu de naissance','gpgid','fingerprint'));
+	//var_dump($result);
         if ( count($result) > 0 ) {
             $filename ='liste_abn_appartenance_statut_'.$id_act.'.csv';
             $filepath = CsvOut::DEFAULT_DIRECTORY . $filename;
@@ -97,7 +103,7 @@ $select = new Zend_Db_Select($zdb->db);
             if ( $fp ) {
                 $res = $csv->export(
                     $result,
-                    Csv::DEFAULT_SEPARATOR,
+					Csv::DEFAULT_SEPARATOR,
                     Csv::DEFAULT_QUOTE,
                     true,
                     $fp
@@ -110,17 +116,19 @@ $select = new Zend_Db_Select($zdb->db);
             }
 		}
 
-//Liste des adhérents de la section (avec l'appartenance et le statut de l'abn):
+//Création du fichier excel: liste des adhérents de la section (avec l'appartenance):
 $select = new \Zend_Db_Select($zdb->db);
         $select->from(array('a' => 'galette_adherents'),array('a.*'))
 		->join(array('g' => 'galette_groups_members'), 'g.id_adh=a.id_adh',array())
 		->join(array('d' => 'galette_dynamic_fields'), 'd.item_id=a.id_adh',array())
-		->join(array('f' => 'galette_field_contents_5'), 'f.id=d.field_val' ,array('f.val'))
-		->where('g.id_group = ?', $id_act)
-		->where('d.field_id = ?', '5')
+		->join(array('f' => 'galette_field_contents_5'), 'f.id=d.field_val' ,array('f.val'))//contenu du champ appartenance (Personnel Nexter ou conjoint, Famille Nexter (enfant), Extérieur...)
+		->where('g.id_group = ?', $id_act)//filtre sur l'activité concernée
+		->where('d.field_id = ?', '5')//filtre sur le champ dynamique 5 = appartenance
 		->group('a.nom_adh');
     $result = $select->query()->fetchAll(Zend_Db::FETCH_ASSOC);
- 
+	//ajout des entetes
+	array_unshift($result,array ('id_adh','id_statut','nom_adh','prenom_adh','pseudo','société','titre adh','date de naissance','sexe (0=non spécifié, 1=M, 2=F)','adresse','adresse2','code postal','ville','pays','tel','gsm','mail','url','icq','msn','jabber','info','info publique','profession','login','mot de passe crypté','date de création du profil','date de modification du profil','activite_adh','bool admin','bool exempt','bool display','date echeance','pref lanque','lieu de naissance','gpgid','fingerprint','appartenance'));
+	//var_dump($result);
         if ( count($result) > 0 ) {
             $filename ='liste_adherents_appartenance_'.$id_act.'.csv';
             $filepath = CsvOut::DEFAULT_DIRECTORY . $filename;
@@ -133,6 +141,7 @@ $select = new \Zend_Db_Select($zdb->db);
                     true,
                     $fp
                 );
+				//var_dump($result);
                 fclose($fp);
                 $written[] = array(
                     'name' => $filename,
