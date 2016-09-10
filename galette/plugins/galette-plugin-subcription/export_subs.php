@@ -124,7 +124,7 @@ $select = new \Zend_Db_Select($zdb->db);
 		->join(array('f' => 'galette_field_contents_5'), 'f.id=d.field_val' ,array('f.val'))//contenu du champ appartenance (Personnel Nexter ou conjoint, Famille Nexter (enfant), Extérieur...)
 		->where('g.id_group = ?', $id_act)//filtre sur l'activité concernée
 		->where('d.field_id = ?', '5')//filtre sur le champ dynamique 5 = appartenance
-		->group('a.nom_adh');
+		->group('a.id_adh');
     $result = $select->query()->fetchAll(Zend_Db::FETCH_ASSOC);
 	//ajout des entetes
 	array_unshift($result,array ('id_adh','id_statut','nom_adh','prenom_adh','pseudo','société','titre adh','date de naissance','sexe (0=non spécifié, 1=M, 2=F)','adresse','adresse2','code postal','ville','pays','tel','gsm','mail','url','icq','msn','jabber','info','info publique','profession','login','mot de passe crypté','date de création du profil','date de modification du profil','activite_adh','bool admin','bool exempt','bool display','date echeance','pref lanque','lieu de naissance','gpgid','fingerprint','appartenance'));
